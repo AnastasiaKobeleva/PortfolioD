@@ -4359,7 +4359,7 @@ p {
     font-size: 1rem;
   }
 
-  .body-s.semibold.desktop {
+  .body-s.light.align-right, .body-s.semibold.desktop {
     display: none;
   }
 
@@ -4729,13 +4729,7 @@ p {
     padding-top: 5rem;
   }
 
-  .wrapper {
-    grid-column-gap: .75rem;
-    grid-row-gap: .75rem;
-    overflow: clip;
-  }
-
-  .wrapper.gap-1-rem {
+  .wrapper, .wrapper.gap-1-rem {
     grid-column-gap: .75rem;
     grid-row-gap: .75rem;
   }
