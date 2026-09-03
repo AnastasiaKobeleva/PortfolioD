@@ -258,6 +258,7 @@
 </head>
 
 <body class="body">
+  <div style="display:none;opacity:0" class="navbar_overlay"></div>
   <div class="full-page home">
     <div data-w-id="6bb5a782-2c80-5788-6630-7623060db01f"
       style="-webkit-transform:translate3d(0, -2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -2rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
@@ -267,7 +268,6 @@
           role="banner" data-no-scroll="1" data-duration="400"
           id="w-node-_6bb5a782-2c80-5788-6630-7623060db021-2bca4d43">
           <div class="padding-horizontal padding-0">
-            <div style="display:none;opacity:0" class="navbar_overlay"></div>
             <div id="w-node-_6bb5a782-2c80-5788-6630-7623060db024-2bca4d43" class="navbar_component">
               <div class="navbar-menu-wrapper-2 logo">
                 <a href="/" aria-current="page" class="logo-2 w-inline-block w--current">
@@ -801,56 +801,87 @@
       const icons = document.querySelectorAll(".icons-wrapper a")
       const header = document.querySelector(".heading-2")
       const body = document.querySelector(".body");// body
+      
+      // Функции показа/скрытия overlay с blur
+      const showOverlay = () => {
+        if (overlay) {
+          overlay.style.display = 'block';
+          overlay.style.opacity = '1';
+        }
+      };
+      const hideOverlay = () => {
+        if (overlay) {
+          overlay.style.display = 'none';
+          overlay.style.opacity = '0';
+        }
+      };
+      
       const burgerModalPlugin = () => {
-        const toggleMenu = () => {
-          //burgerIcon.classList.toggle("active", state);
-          // body.classList.toggle("no-scroll", state);
-          if (burgerIcon.classList.contains("active")) {
-            // Отключаем pull-to-refresh и скролл на телефоне
-            document.addEventListener("touchmove", preventScroll, { passive: false });
-            body.classList.add("no-scroll");
-          } else {
-            // Включаем обратно
-            document.removeEventListener("touchmove", preventScroll);
-            body.classList.remove("no-scroll");
-          }
-        };
+        const dropdown = document.querySelector(".navbar_dropdown");
         const preventScroll = (e) => {
           e.preventDefault();
         };
-        overlay?.addEventListener("click", () => {
-          if (burgerIcon.classList.contains("active")) {
+        let lastOpen = false;
+        let lockedScrollY = 0;
+        const setOpen = (open) => {
+          if (open === lastOpen) return;
+          lastOpen = open;
+          if (open) {
+            lockedScrollY = window.scrollY || window.pageYOffset;
+            document.documentElement.classList.add("no-scroll");
+            body.classList.add("no-scroll");
+            body.style.top = "-" + lockedScrollY + "px";
+            document.addEventListener("touchmove", preventScroll, { passive: false });
+            document.addEventListener("wheel", preventScroll, { passive: false });
+            burgerIcon.classList.add("active");
+            showOverlay();
+          } else {
+            document.documentElement.classList.remove("no-scroll");
             body.classList.remove("no-scroll");
-            burgerIcon.classList.toggle("active");
+            body.style.top = "";
+            document.removeEventListener("touchmove", preventScroll);
+            document.removeEventListener("wheel", preventScroll);
+            burgerIcon.classList.remove("active");
+            hideOverlay();
+            window.scrollTo(0, lockedScrollY);
           }
+        };
+        const blockOverlayEvent = (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+        };
+        if (overlay) {
+          ["click", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend", "wheel", "touchmove"].forEach((type) => {
+            overlay.addEventListener(type, blockOverlayEvent, { capture: true, passive: false });
+            document.addEventListener(type, (e) => {
+              if (e.target === overlay) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+              }
+            }, { capture: true, passive: false });
+          });
+        }
+        const dropdownList = document.querySelector(".navbar_dropdown-list");
+        const syncOpen = () => {
+          const open = !!(
+            (dropdown && dropdown.classList.contains("w--open")) ||
+            (dropdownList && dropdownList.classList.contains("w--open"))
+          );
+          setOpen(open);
+        };
+        [dropdown, dropdownList].forEach((el) => {
+          if (!el) return;
+          new MutationObserver(syncOpen).observe(el, { attributes: true, attributeFilter: ["class"] });
         });
-        /**overlay?.addEventListener("touchstart", () => {
-                if (burgerIcon.classList.contains("active")) {
-                  body.classList.remove("no-scroll");
-                  burgerIcon.classList.toggle("active");
-                }
-              });*/
-        resume.addEventListener("click", (e) => {
+        resume?.addEventListener("click", (e) => {
           e.stopPropagation();
         });
-        navbarComponent.addEventListener("click", () => {
-          if (burgerIcon.classList.contains("active")) {
-            body.classList.remove("no-scroll");
-            burgerIcon.classList.remove("active");
-          }
-        });
-        header.addEventListener("click", (e) => {
+        header?.addEventListener("click", (e) => {
           e.stopPropagation();
         });
         burgerIcon.addEventListener("click", (e) => {
           e.stopPropagation();
-          burgerIcon.classList.toggle("active");
-          if (burgerIcon.classList.contains("active")) {
-            body.classList.add("no-scroll");
-          }
-          if (!burgerIcon.classList.contains("active")) {
-            body.classList.remove("no-scroll");
-          }
         });
         icons.forEach((link) => {
           link.addEventListener("click", (e) => {

@@ -2906,10 +2906,10 @@ p {
 }
 
 .navbar_overlay {
-  z-index: 5;
+  z-index: 900;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
-  cursor: pointer;
+  pointer-events: auto;
   background-color: #44444480;
   width: 100vw;
   height: 100vh;
@@ -4174,7 +4174,9 @@ p {
   }
 
   .navbar_overlay {
-    background-color: #9e9e9e80;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: #44444480;
     display: none;
   }
 
@@ -4183,6 +4185,30 @@ p {
     backdrop-filter: blur(50px);
     background-image: linear-gradient(#fff, #ffffff80);
     position: fixed;
+  }
+
+  body.no-scroll .navbar-wrapper,
+  body.no-scroll .navbar-wrapper.home,
+  body.no-scroll .navbar,
+  body:has(.navbar_dropdown-list.w--open) .navbar-wrapper,
+  body:has(.navbar_dropdown-list.w--open) .navbar-wrapper.home,
+  body:has(.navbar_dropdown-list.w--open) .navbar {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: transparent !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    position: fixed !important;
+    inset: 0 0 auto !important;
+  }
+
+  body.no-scroll .lang-switch-toggle,
+  body:has(.navbar_dropdown-list.w--open) .lang-switch-toggle {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
   }
 
   .padding-horizontal {
@@ -5751,6 +5777,27 @@ html[data-i18n-pending] body {
   visibility: hidden;
 }
 
+html.no-scroll,
+html.no-scroll body,
+html:has(.navbar_dropdown-list.w--open),
+html:has(.navbar_dropdown-list.w--open) body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+html.no-scroll body,
+html:has(.navbar_dropdown-list.w--open) body {
+  position: fixed !important;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+html:has(.navbar_dropdown-list.w--open) .full-page {
+  overflow: hidden !important;
+}
+
 /* Language switch — sits in .navbar_right between menu and burger */
 .lang-switch {
   position: relative;
@@ -5819,7 +5866,7 @@ html[data-i18n-pending] body {
   cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: .5px;
   padding: .5rem .75rem;
   text-align: left;

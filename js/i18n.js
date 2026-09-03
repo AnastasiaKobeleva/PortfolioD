@@ -129,14 +129,18 @@
   }
 
   function loadWebflow() {
-    var placeholder = document.querySelector('script[data-webflow-src]');
-    if (!placeholder) return;
-    var src = placeholder.getAttribute('data-webflow-src');
-    if (!src) return;
-    var injected = document.createElement('script');
-    injected.src = src;
-    injected.type = 'text/javascript';
-    document.body.appendChild(injected);
+    return new Promise(function (resolve) {
+      var placeholder = document.querySelector('script[data-webflow-src]');
+      if (!placeholder) { resolve(); return; }
+      var src = placeholder.getAttribute('data-webflow-src');
+      if (!src) { resolve(); return; }
+      var injected = document.createElement('script');
+      injected.src = src;
+      injected.type = 'text/javascript';
+      injected.onload = resolve;
+      injected.onerror = resolve;
+      document.body.appendChild(injected);
+    });
   }
 
   function clearPending() {
@@ -179,7 +183,9 @@
     })
     .then(function () {
       clearTimeout(fetchTimeoutId);
+      return loadWebflow();
+    })
+    .then(function () {
       clearPending();
-      loadWebflow();
     });
 })();
