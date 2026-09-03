@@ -1,7 +1,16 @@
 <!DOCTYPE html><!--  Last Published: Mon Mar 17 2025 08:07:20 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="67bdb0b6c5cd56182bca4d4f" data-wf-site="67bdb0b6c5cd56182bca4d44">
+<html lang="ru" data-i18n-page="fintrack" data-wf-page="67bdb0b6c5cd56182bca4d4f" data-wf-site="67bdb0b6c5cd56182bca4d44">
 
 <head>
+  <script>
+(function () {
+  try {
+    var l = localStorage.getItem('site-lang');
+    if (l && l !== 'ru') document.documentElement.setAttribute('data-i18n-pending', '');
+  } catch (e) {}
+})();
+</script>
+
   <meta charset="utf-8">
   <title>Fintrack</title>
   <meta content="Fintrack" property="og:title">
@@ -59,16 +68,23 @@
                 <a href="/" class="nav-link-2 item w-inline-block"><img loading="eager" src="/images/icon-back.svg"
                     alt="" class="icon-24">
                   <div class="nav-logo">
-                    <div class="logo-name-2">На главную</div>
+                    <div class="logo-name-2" data-i18n="nav.logoBack">На главную</div>
                   </div>
                 </a>
               </div>
               <div class="navbar_right">
                 <div class="navbar-menu-wrapper-2">
-                  <a href="/projects/" class="nav-link-2 item w-nav-link">Проекты</a>
-                  <a href="/about/" class="nav-link-2 item w-nav-link">Обо мне</a>
+                  <a href="/projects/" class="nav-link-2 item w-nav-link" data-i18n="nav.projects">Проекты</a>
+                  <a href="/about/" class="nav-link-2 item w-nav-link" data-i18n="nav.about">Обо мне</a>
                   <a href="mailto:kobelevanastasiia@gmail.com" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2ad"
                     target="_blank" class="nav-link-2 mail w-nav-link">kobelevanastasiia@gmail.com</a>
+                </div>
+                <div class="lang-switch" data-lang-switch>
+                  <button type="button" class="lang-switch-toggle nav-link-2 item" data-lang-current aria-expanded="false" aria-haspopup="listbox">RU</button>
+                  <div class="lang-switch-menu" role="listbox">
+                    <button type="button" class="lang-switch-option" data-lang="ru" data-i18n="lang.ru">RU</button>
+                    <button type="button" class="lang-switch-option" data-lang="en" data-i18n="lang.en">EN</button>
+                  </div>
                 </div>
                 <div data-delay="1000" data-hover="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2af"
                   class="navbar_dropdown w-dropdown">
@@ -83,13 +99,13 @@
                           <div class="navbar_link-wrapper-2">
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2b8-fb00c29a" class="into-view-1">
                               <a href="/projects/" class="navbar_link-3 top w-inline-block">
-                                <div class="nav-link-2 item">Проекты</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.projects">Проекты</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2bd-fb00c29a" class="into-view-1">
                               <a href="/about/" class="navbar_link-3 bottom w-inline-block">
-                                <div class="nav-link-2 item">Обо мне</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.about">Обо мне</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
@@ -100,7 +116,7 @@
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2c4-fb00c29a" class="into-view-1">
                               <a href="/documents/Kobeleva_Anastasia_CV_2026.pdf" target="_blank"
                                 class="navbar_link-3 middle w-inline-block">
-                                <div class="nav-link-2 item">Резюме</div>
+                                <div class="nav-link-2 item" data-i18n="nav.resume">Резюме</div>
                                 <div class="icon-48"><img loading="lazy" src="/images/message-text.svg" alt=""
                                     class="icon-24"></div>
                               </a>
@@ -111,7 +127,7 @@
                       <div class="wrapper">
                         <div class="navbar_drop-content _2">
                           <div class="section-intro align-center">
-                            <div class="heading-2 bold">Обсудим идеи 👋🏻</div>
+                            <div class="heading-2 bold" data-i18n="nav.discuss">Обсудим идеи 👋🏻</div>
                             <div class="icons-wrapper">
                               <a draggable="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2d0"
                                 href="mailto:kobelevanastasiia@gmail.com" target="_blank"
@@ -142,7 +158,7 @@
         <div class="project-hero-logo-title max-40-rem">
           <div class="company-logo-wrapper"><img src="/images/60px.png" loading="lazy" alt="" class="company-logo _w-4">
           </div>
-          <div class="heading-2 align-center all-caps">Fintrack — трекер финансов и целей</div>
+          <div class="heading-2 align-center all-caps" data-i18n="fintrack.hero.title">Fintrack — трекер финансов и целей</div>
           <div class="project-hero-items">
             <div class="body-xs">UX/UI design</div>
             <div class="body-xs point">·</div>
@@ -162,11 +178,11 @@
         <div class="section-container bottom-padding-0 top-padding-0 gap-0">
           <div id="about" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">О проекте<br></h1>
+              <h1 split-text="" class="heading-3" data-i18n-html="fintrack.about.title">О проекте<br></h1>
               <div class="wrapper gap-1-rem">
-                <div class="body-s"><strong>Fintrack </strong>— мобильное приложение для учета финансов, которое
+                <div class="body-s" data-i18n-html="fintrack.about.p1Html"><strong>Fintrack </strong>— мобильное приложение для учета финансов, которое
                   помогает контролировать бюджет, анализировать расходы и достигать финансовых целей.</div>
-                <div class="body-s"><strong>Целевой рынок:</strong> глобальный (фокус на пользователей, стремящихся к
+                <div class="body-s" data-i18n-html="fintrack.about.p2Html"><strong>Целевой рынок:</strong> глобальный (фокус на пользователей, стремящихся к
                   финансовой грамотности).</div>
               </div>
             </div>
@@ -174,31 +190,31 @@
           <div id="goals" class="section-container padding-2-rem">
             <div class="wrapper gap-1-rem section-intro">
               <div class="card-wrapper">
-                <div class="body-l semibold">📌 Задача</div>
+                <div class="body-l semibold" data-i18n="fintrack.goals.taskTitle">📌 Задача</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Разработать удобное и интуитивно понятное приложение для отслеживания финансов.
+                  <div class="body-s" data-i18n="fintrack.goals.task">Разработать удобное и интуитивно понятное приложение для отслеживания финансов.
                     Необходимо сделать этот процесс простым, понятным и мотивирующим, чтобы пользователи могли уверенно
                     управлять своими финансами и достигать финансовых целей.</div>
                 </div>
               </div>
               <div class="card-wrapper">
-                <div class="body-l semibold">⚡️ Решение</div>
+                <div class="body-l semibold" data-i18n="fintrack.goals.solutionTitle">⚡️ Решение</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Я разработала концепцию приложения, которое охватывает весь процесс управления
+                  <div class="body-s" data-i18n="fintrack.goals.solutionIntro">Я разработала концепцию приложения, которое охватывает весь процесс управления
                     финансами:</div>
-                  <div class="body-s">✦ Удобное добавление транзакций.</div>
-                  <div class="body-s">✦ Визуализация расходов, позволяющая быстро оценить ситуацию.</div>
-                  <div class="body-s">✦ Графики о состоянии средств и статистика расходов по категориям.</div>
-                  <div class="body-s">✦ Возможность создавать и отслеживать цели (накопления, крупные покупки), динамика
+                  <div class="body-s" data-i18n="fintrack.goals.solution1">✦ Удобное добавление транзакций.</div>
+                  <div class="body-s" data-i18n="fintrack.goals.solution2">✦ Визуализация расходов, позволяющая быстро оценить ситуацию.</div>
+                  <div class="body-s" data-i18n="fintrack.goals.solution3">✦ Графики о состоянии средств и статистика расходов по категориям.</div>
+                  <div class="body-s" data-i18n="fintrack.goals.solution4">✦ Возможность создавать и отслеживать цели (накопления, крупные покупки), динамика
                     прогресса.</div>
-                  <div class="body-s">✦ Эмоциональный, но чистый UI, не отвлекающий от основной задачи.</div>
+                  <div class="body-s" data-i18n="fintrack.goals.solution5">✦ Эмоциональный, но чистый UI, не отвлекающий от основной задачи.</div>
                 </div>
               </div>
               <div class="card-wrapper">
-                <div class="body-l semibold">⭐️ Результат</div>
+                <div class="body-l semibold" data-i18n="fintrack.goals.resultTitle">⭐️ Результат</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Проект, который делает финансовый контроль доступным и удобным.</div>
-                  <div class="body-s"><strong>Потенциал масштабирования:</strong> интерфейс готов к адаптации под разные
+                  <div class="body-s" data-i18n="fintrack.goals.result">Проект, который делает финансовый контроль доступным и удобным.</div>
+                  <div class="body-s" data-i18n-html="fintrack.goals.scaleHtml"><strong>Потенциал масштабирования:</strong> интерфейс готов к адаптации под разные
                     рынки и аудитории.</div>
                 </div>
               </div>
@@ -206,59 +222,59 @@
           </div>
           <div id="process" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Процесс проектирования<br></h1>
+              <h1 split-text="" class="heading-3" data-i18n-html="fintrack.process.title">Процесс проектирования<br></h1>
               <div class="wrapper gap-0-5-rem">
-                <div class="body-s">1. Изучение предметной области: анализ других приложений по учету финансов.</div>
-                <div class="body-s">2. Формирование гипотез.</div>
-                <div class="body-s">3. Определение целей и ключевых проблем.</div>
-                <div class="body-s">4. Сценарии, JTBD, user flow.<br></div>
-                <div class="body-s">5. Проработка решения: финальный дизайн и описание идей.<br></div>
+                <div class="body-s" data-i18n="fintrack.process.1">1. Изучение предметной области: анализ других приложений по учету финансов.</div>
+                <div class="body-s" data-i18n="fintrack.process.2">2. Формирование гипотез.</div>
+                <div class="body-s" data-i18n="fintrack.process.3">3. Определение целей и ключевых проблем.</div>
+                <div class="body-s" data-i18n-html="fintrack.process.4">4. Сценарии, JTBD, user flow.<br></div>
+                <div class="body-s" data-i18n-html="fintrack.process.5">5. Проработка решения: финальный дизайн и описание идей.<br></div>
               </div>
             </div>
           </div>
           <div id="research" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Исследование<br></h1>
-              <div class="body-s">Чтобы определить целевую аудиторию и понять, насколько актуален такой функционал, я
+              <h1 split-text="" class="heading-3" data-i18n-html="fintrack.research.title">Исследование<br></h1>
+              <div class="body-s" data-i18n="fintrack.research.intro">Чтобы определить целевую аудиторию и понять, насколько актуален такой функционал, я
                 решила провести несколько интервью. Мне было важно узнать, как люди в целом следят за своими финансами,
                 какими инструментами пользуются для управления бюджетом и используют ли их вообще. Также я спросила, как
                 они копят на свои мечты и цели: просто держат суммы в голове или используют какие-то инструменты для
                 визуализации. Это помогло глубже понять потребности пользователей и учесть их в проекте.</div>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Основные вопросы, которые мне было важно выяснить:</div>
+                <div class="body-s" data-i18n="fintrack.research.questionsIntro">Основные вопросы, которые мне было важно выяснить:</div>
                 <div class="wrapper gap-0-5-rem">
                   <div class="competitor-analysis-items-content">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ Отслеживаете ли вы свои ежемесячные расходы и доходы?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q1">❓ Отслеживаете ли вы свои ежемесячные расходы и доходы?</div>
                     </div>
                   </div>
                   <div class="competitor-analysis-items-content gap-0-5-rem">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ Если да, то какими инструментами пользуетесь?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q2">❓ Если да, то какими инструментами пользуетесь?</div>
                     </div>
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ Если нет, то почему?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q3">❓ Если нет, то почему?</div>
                     </div>
                   </div>
                   <div class="competitor-analysis-items-content">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ С какими трудностями сталкиваетесь при использовании приложений и анализе
+                      <div class="body-xs" data-i18n="fintrack.research.q4">❓ С какими трудностями сталкиваетесь при использовании приложений и анализе
                         финансов?</div>
                     </div>
                   </div>
                   <div class="competitor-analysis-items-content">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓Какое приложение для управления финансами вы бы назвали идеальным?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q5">❓Какое приложение для управления финансами вы бы назвали идеальным?</div>
                     </div>
                   </div>
                   <div class="competitor-analysis-items-content">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ Какие инструменты и функции для вас наиболее важны и почему?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q6">❓ Какие инструменты и функции для вас наиболее важны и почему?</div>
                     </div>
                   </div>
                   <div class="competitor-analysis-items-content">
                     <div class="competitor-analysis-item">
-                      <div class="body-xs">❓ Пользуетесь ли вы каким-то инструментом для визуализации своих целей?</div>
+                      <div class="body-xs" data-i18n="fintrack.research.q7">❓ Пользуетесь ли вы каким-то инструментом для визуализации своих целей?</div>
                     </div>
                   </div>
                 </div>
@@ -267,10 +283,10 @@
           </div>
           <div id="insights" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Инсайты<br></h1>
+              <h1 split-text="" class="heading-3" data-i18n-html="fintrack.insights.title">Инсайты<br></h1>
               <div class="wrapper gap-1-rem">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">После проведения интервью я выделила несколько ключевых инсайтов:</div>
+                  <div class="body-s" data-i18n="fintrack.insights.intro">После проведения интервью я выделила несколько ключевых инсайтов:</div>
                 </div>
                 <div class="wrapper gap-1-rem">
                   <div class="table-cell">
@@ -279,12 +295,12 @@
                         <div class="number">
                           <div class="body-xs semibold">1</div>
                         </div>
-                        <div class="body-s semibold desktop">Люди пользуются разными инструментами, но не всегда
+                        <div class="body-s semibold desktop" data-i18n="fintrack.insights.1.title">Люди пользуются разными инструментами, но не всегда
                           довольны ими.</div>
-                        <div class="body-s semibold mobile"><span class="selected">   1   </span>  Люди пользуются
+                        <div class="body-s semibold mobile" data-i18n-html="fintrack.insights.1.titleMobileHtml"><span class="selected">   1   </span>  Люди пользуются
                           разными инструментами, но не всегда довольны ими.</div>
                       </div>
-                      <div class="body-xs">Часто люди имеют разные счета в разных банках. В одном банке у них зарплатная
+                      <div class="body-xs" data-i18n="fintrack.insights.1.desc">Часто люди имеют разные счета в разных банках. В одном банке у них зарплатная
                         карта, в другом - кредитная, в третьем - накопительный счет. Из-за этого сложно вести общий
                         учет, что часто приводит к лишним тратам.</div>
                     </div>
@@ -295,12 +311,12 @@
                         <div class="number">
                           <div class="body-xs semibold">2</div>
                         </div>
-                        <div class="body-s semibold desktop">Многие копят на крупные цели, но не имеют четкой системы.
+                        <div class="body-s semibold desktop" data-i18n="fintrack.insights.2.title">Многие копят на крупные цели, но не имеют четкой системы.
                         </div>
-                        <div class="body-s semibold mobile"><span class="selected">   2   </span>  Многие копят на
+                        <div class="body-s semibold mobile" data-i18n-html="fintrack.insights.2.titleMobileHtml"><span class="selected">   2   </span>  Многие копят на
                           крупные цели, но не имеют четкой системы.</div>
                       </div>
-                      <div class="body-xs">Кто-то просто держит сумму в голове, кто-то откладывает деньги на отдельный
+                      <div class="body-xs" data-i18n="fintrack.insights.2.desc">Кто-то просто держит сумму в голове, кто-то откладывает деньги на отдельный
                         счет, но нет удобного визуального инструмента, который показывал бы прогресс.</div>
                     </div>
                   </div>
@@ -310,12 +326,12 @@
                         <div class="number">
                           <div class="body-xs semibold">3</div>
                         </div>
-                        <div class="body-s semibold desktop">Большинство людей хотят контролировать свои финансы, но не
+                        <div class="body-s semibold desktop" data-i18n="fintrack.insights.3.title">Большинство людей хотят контролировать свои финансы, но не
                           делают этого систематически.</div>
-                        <div class="body-s semibold mobile"><span class="selected">   3   </span>  Большинство людей
+                        <div class="body-s semibold mobile" data-i18n-html="fintrack.insights.3.titleMobileHtml"><span class="selected">   3   </span>  Большинство людей
                           хотят контролировать свои финансы, но не делают этого систематически.</div>
                       </div>
-                      <div class="body-xs">Многие отмечают, что начинали вести учет, но быстро забрасывали, потому что
+                      <div class="body-xs" data-i18n="fintrack.insights.3.desc">Многие отмечают, что начинали вести учет, но быстро забрасывали, потому что
                         это занимало много времени или было неудобно.</div>
                     </div>
                   </div>
@@ -325,17 +341,17 @@
           </div>
           <div id="problem" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Проблема<br></h1>
+              <h1 split-text="" class="heading-3" data-i18n-html="fintrack.problem.title">Проблема<br></h1>
               <div class="wrapper gap-1-rem">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Обобщив все полученные выводы и инсайты, я сформулировала основную проблему:</div>
+                  <div class="body-s" data-i18n="fintrack.problem.intro">Обобщив все полученные выводы и инсайты, я сформулировала основную проблему:</div>
                 </div>
                 <div class="table-cell red">
                   <div class="emoji-absolut">
                     <div class="heading-3">‼️</div>
                   </div>
                   <div class="wrapper gap-1-rem">
-                    <div class="body-xs">Людям сложно учитывать доходы и расходы, потому что большинство существующих
+                    <div class="body-xs" data-i18n="fintrack.problem.statement">Людям сложно учитывать доходы и расходы, потому что большинство существующих
                       решений либо перегружены, либо неудобны, либо не дают полной картины финансов. Дополнительно
                       возникает проблема разрозненных счетов в разных приложениях и наличных расходов, которые
                       невозможно вносить вручную.</div>
@@ -347,10 +363,10 @@
           <div id="hypotheses" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Гипотезы<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="fintrack.hypotheses.title">Гипотезы<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">После я сформировала гипотезы — какие решения сделают приложение удобнее и полезнее.
+                <div class="body-s" data-i18n="fintrack.hypotheses.intro">После я сформировала гипотезы — какие решения сделают приложение удобнее и полезнее.
                   Дальше проверяла их, продумывала, как они впишутся в интерфейс и помогут пользователям.</div>
               </div>
               <div class="project-table">
@@ -360,11 +376,11 @@
                       <div class="number">
                         <div class="body-xs semibold">1</div>
                       </div>
-                      <div class="body-s semibold desktop">Статистика и аналитика</div>
-                      <div class="body-s semibold mobile"><span class="selected">   1   </span>  Статистика и аналитика
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.1.title">Статистика и аналитика</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.1.titleMobileHtml"><span class="selected">   1   </span>  Статистика и аналитика
                       </div>
                     </div>
-                    <div class="body-xs">Если показывать расходы и доходы в виде графиков и диаграмм, то пользователи
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.1.desc">Если показывать расходы и доходы в виде графиков и диаграмм, то пользователи
                       будут быстрее понимать, куда уходят их деньги.</div>
                   </div>
                 </div>
@@ -374,10 +390,10 @@
                       <div class="number">
                         <div class="body-xs semibold">2</div>
                       </div>
-                      <div class="body-s semibold desktop">Интуитивность</div>
-                      <div class="body-s semibold mobile"><span class="selected">   2   </span>  Интуитивность</div>
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.2.title">Интуитивность</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.2.titleMobileHtml"><span class="selected">   2   </span>  Интуитивность</div>
                     </div>
-                    <div class="body-xs">Если интерфейс будет простым и понятным, то люди смогут быстро разобраться и
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.2.desc">Если интерфейс будет простым и понятным, то люди смогут быстро разобраться и
                       начать пользоваться приложением.</div>
                   </div>
                 </div>
@@ -387,10 +403,10 @@
                       <div class="number">
                         <div class="body-xs semibold">3</div>
                       </div>
-                      <div class="body-s semibold desktop">Финансовые цели</div>
-                      <div class="body-s semibold mobile"><span class="selected">   3   </span>  Финансовые цели</div>
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.3.title">Финансовые цели</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.3.titleMobileHtml"><span class="selected">   3   </span>  Финансовые цели</div>
                     </div>
-                    <div class="body-xs">Добавление финансовых целей дополнит приложение новым функционалом и привлечет
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.3.desc">Добавление финансовых целей дополнит приложение новым функционалом и привлечет
                       еще больше пользователей.</div>
                   </div>
                 </div>
@@ -400,10 +416,10 @@
                       <div class="number">
                         <div class="body-xs semibold">4</div>
                       </div>
-                      <div class="body-s semibold desktop">Категории трат</div>
-                      <div class="body-s semibold mobile"><span class="selected">   4   </span>  Категории трат</div>
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.4.title">Категории трат</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.4.titleMobileHtml"><span class="selected">   4   </span>  Категории трат</div>
                     </div>
-                    <div class="body-xs">Если дать возможность редактировать категории и создавать свои, то каждый
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.4.desc">Если дать возможность редактировать категории и создавать свои, то каждый
                       сможет подстроить приложение под свои финансовые привычки.</div>
                   </div>
                 </div>
@@ -413,10 +429,10 @@
                       <div class="number">
                         <div class="body-xs semibold">5</div>
                       </div>
-                      <div class="body-s semibold desktop">Мотивация</div>
-                      <div class="body-s semibold mobile"><span class="selected">   5   </span>  Мотивация</div>
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.5.title">Мотивация</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.5.titleMobileHtml"><span class="selected">   5   </span>  Мотивация</div>
                     </div>
-                    <div class="body-xs">Визуализация финансовых целей может придать мотивации пользователям откладывать
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.5.desc">Визуализация финансовых целей может придать мотивации пользователям откладывать
                       и копить еще осознанней.</div>
                   </div>
                 </div>
@@ -426,11 +442,11 @@
                       <div class="number">
                         <div class="body-xs semibold">6</div>
                       </div>
-                      <div class="body-s semibold desktop">Необязательная авторизация</div>
-                      <div class="body-s semibold mobile"><span class="selected">   6   </span>  Необязательная
+                      <div class="body-s semibold desktop" data-i18n="fintrack.hypotheses.6.title">Необязательная авторизация</div>
+                      <div class="body-s semibold mobile" data-i18n-html="fintrack.hypotheses.6.titleMobileHtml"><span class="selected">   6   </span>  Необязательная
                         авторизация</div>
                     </div>
-                    <div class="body-xs">Если сделать авторизацию необязательной, то пользователи смогут сразу получить
+                    <div class="body-xs" data-i18n="fintrack.hypotheses.6.desc">Если сделать авторизацию необязательной, то пользователи смогут сразу получить
                       доступ ко всем основным функциям без лишних шагов. Это снизит барьер входа.</div>
                   </div>
                 </div>
@@ -440,10 +456,10 @@
           <div id="benchmarking" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3 align-right">Анализ конкурентов<br></h1>
+                <h1 split-text="" class="heading-3 align-right" data-i18n-html="fintrack.competitors.title">Анализ конкурентов<br></h1>
               </div>
               <div class="wrapper">
-                <div class="body-s">Также я проанализировала другие приложения для учета финансов, посмотрела, какие
+                <div class="body-s" data-i18n="fintrack.competitors.desc">Также я проанализировала другие приложения для учета финансов, посмотрела, какие
                   функции предлагают конкуренты, что у них удобно, а что может вызывать сложности у пользователей. Это
                   помогло мне понять, какие моменты стоит учесть и улучшить, чтобы сделать приложение не только
                   полезным, но и удобным.</div>
@@ -459,36 +475,36 @@
           </div>
           <div id="user-persona" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3 align-right">Юзер персона<br></h1>
+              <h1 split-text="" class="heading-3 align-right" data-i18n-html="fintrack.persona.title">Юзер персона<br></h1>
               <div class="user-persona">
                 <div class="wrapper user-persona-info"><img src="/images/user-persona.jpg" loading="lazy" sizes="100vw"
                     srcset="/images/c4a3cf12840dc24b8a6e6cc05a3b4cca_user-persona-p-500.jpg 500w, /images/c4a3cf12840dc24b8a6e6cc05a3b4cca_user-persona-p-800.jpg 800w, /images/c4a3cf12840dc24b8a6e6cc05a3b4cca_user-persona-p-1080.jpg 1080w, /images/user-persona.jpg 1097w"
                     alt="" class="persona fintrack">
                   <div class="wrapper gap-1-rem">
                     <div class="wrapper gap-0-5-rem">
-                      <div class="body-m semibold">Алексей, 30 лет</div>
+                      <div class="body-m semibold" data-i18n="fintrack.persona.name">Алексей, 30 лет</div>
                     </div>
                     <div class="wrapper gap-0-5-rem">
-                      <div class="body-s semibold">Род деятельности</div>
-                      <div class="body-xs">Разработчик ПО</div>
+                      <div class="body-s semibold" data-i18n="fintrack.persona.jobLabel">Род деятельности</div>
+                      <div class="body-xs" data-i18n="fintrack.persona.job">Разработчик ПО</div>
                     </div>
                   </div>
                 </div>
                 <div class="wrapper gap-1-rem">
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Мотивация</div>
-                    <div class="body-xs">— Хочет грамотно управлять своими финансами, чтобы достичь целей.<br>—
+                    <div class="body-s semibold" data-i18n="fintrack.persona.motivationLabel">Мотивация</div>
+                    <div class="body-xs" data-i18n-html="fintrack.persona.motivationHtml">— Хочет грамотно управлять своими финансами, чтобы достичь целей.<br>—
                       Стремится к финансовой стабильности и независимости.<br></div>
                   </div>
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Цели</div>
-                    <div class="body-xs">— Копит деньги к лету на семейный отпуск.<br>— Откладывает часть зарплаты на
+                    <div class="body-s semibold" data-i18n="fintrack.persona.goalsLabel">Цели</div>
+                    <div class="body-xs" data-i18n-html="fintrack.persona.goalsHtml">— Копит деньги к лету на семейный отпуск.<br>— Откладывает часть зарплаты на
                       покупку своего дома.<br>— Хочет избежать хаоса в финансах и видеть реальную картину своих доходов
                       и расходов.</div>
                   </div>
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Болевые точки</div>
-                    <div class="body-xs">— Доходы и расходы распределены между разными счетами и наличными.<br>—
+                    <div class="body-s semibold" data-i18n="fintrack.persona.painLabel">Болевые точки</div>
+                    <div class="body-xs" data-i18n-html="fintrack.persona.painHtml">— Доходы и расходы распределены между разными счетами и наличными.<br>—
                       Отсутствие удобного инструмента для отслеживания накоплений на крупные цели.<br>— Отсутствие
                       мотивации и напоминаний о достижении финансовых целей.</div>
                   </div>
@@ -496,7 +512,7 @@
               </div>
             </div>
             <div class="section-intro">
-              <h1 split-text="" class="heading-3 align-right">Карта эмпатий<br></h1>
+              <h1 split-text="" class="heading-3 align-right" data-i18n-html="fintrack.empathy.title">Карта эмпатий<br></h1>
               <div class="fm-empathy-map-wrapper"><img src="/images/Empathy-map_1.png" loading="lazy" sizes="100vw"
                   srcset="/images/Empathy-map_1-p-500.png 500w, /images/Empathy-map_1-p-800.png 800w, /images/Empathy-map_1-p-1080.png 1080w, /images/Empathy-map_1-p-1600.png 1600w, /images/Empathy-map_1-p-2000.png 2000w, /images/Empathy-map_1.png 2458w"
                   alt="" class="img"></div>
@@ -505,13 +521,13 @@
           <div id="solution" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Решение<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="fintrack.solution.title">Решение<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="heading-wrapper">
-                  <h1 split-text="" class="body-xl semibold">Главный экран с бюджетом<br></h1>
+                  <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.home.title">Главный экран с бюджетом<br></h1>
                 </div>
-                <div class="body-s">Главный экран показывает пользователю его финансовое состояние: баланс, сколько было
+                <div class="body-s" data-i18n-html="fintrack.solution.home.descHtml">Главный экран показывает пользователю его финансовое состояние: баланс, сколько было
                   потрачено в этом месяце, недавние расходы, популярные категории трат. Здесь собрана вся ключевая
                   информация, чтобы быстро оценить ситуацию без лишних переходов.<br>✔ Основные показатели крупные и
                   наглядные.<br>✔ Можно быстро добавить новую транзакцию.<br>✔ Нет перегруженности — только важные
@@ -523,16 +539,16 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Добавление транзакции<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.add.title">Добавление транзакции<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
                   <div class="wrapper">
-                    <div class="body-s">Пользователь может быстро добавить транзакцию, введя сумму и выбрав категорию,
+                    <div class="body-s" data-i18n-html="fintrack.solution.add.p1Html">Пользователь может быстро добавить транзакцию, введя сумму и выбрав категорию,
                       счет и дату. Можно также оставить комментарий.<br></div>
                   </div>
                   <div class="wrapper">
-                    <div class="body-s">Я пыталась сделать процесс добавления транзакции наиболее простым — табы с часто
+                    <div class="body-s" data-i18n="fintrack.solution.add.p2">Я пыталась сделать процесс добавления транзакции наиболее простым — табы с часто
                       используемыми суммами, удобный выбор счета и даты, понятные категории с иконками. Все действия
                       выполняются за несколько секунд, без лишних шагов.</div>
                   </div>
@@ -544,11 +560,11 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">История<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.history.title">История<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper">
-                  <div class="body-s">Раздел показывает все транзакции пользователя — траты и поступления. Моя задача
+                  <div class="body-s" data-i18n="fintrack.solution.history.desc">Раздел показывает все транзакции пользователя — траты и поступления. Моя задача
                     заключалась в том, чтобы сделать список транзакций максимально читаемым и структурированным: я
                     добавила фильтры для быстрого поиска, визуально разделила траты и поступления, а также дополнила
                     экран информацией об общей сумме расходов и доходов.</div>
@@ -560,11 +576,11 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Детали транзакции<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.details.title">Детали транзакции<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Открывается при нажатии на операцию в истории. Здесь отображается вся информация о
+                  <div class="body-s" data-i18n="fintrack.solution.details.desc">Открывается при нажатии на операцию в истории. Здесь отображается вся информация о
                     транзакции (сумма, дата, счет, категория, комментарий). Пользователь может отредактировать или
                     удалить операцию.</div>
                 </div><img src="/images/Fintrack-4.png" loading="eager" width="1285"
@@ -575,14 +591,14 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Аналитика<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.analytics.title">Аналитика<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Одна из главных функциональных фичей приложения — раздел с аналитикой. Здесь
+                  <div class="body-s" data-i18n-html="fintrack.solution.analytics.p1Html">Одна из главных функциональных фичей приложения — раздел с аналитикой. Здесь
                     пользователь может отслеживать динамику доходов и расходов, выявлять общие тенденции и понимать,
                     куда уходят деньги.<br></div>
-                  <div class="body-s">Доступны два типа графиков: линейный — для динамики доходов и расходов, круговой —
+                  <div class="body-s" data-i18n-html="fintrack.solution.analytics.p2Html">Доступны два типа графиков: линейный — для динамики доходов и расходов, круговой —
                     для распределения трат по категориям. Ключевые показатели — сумма, сравнение с прошлым периодом и
                     средние значения. Минималистичный дизайн и интерактивные подсказки делают данные более
                     наглядными.<br></div>
@@ -594,11 +610,11 @@
             </div>
             <div class="section-intro max-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Фильтры<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.filters.title">Фильтры<br></h1>
               </div>
               <div class="wrapper">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Можно настроить аналитику под свои нужды с помощью фильтров: выбрать конкретный
+                  <div class="body-s" data-i18n="fintrack.solution.filters.desc">Можно настроить аналитику под свои нужды с помощью фильтров: выбрать конкретный
                     счет и одну или несколько категорий расходов. По умолчанию отображается период — текущий месяц, но
                     пользователь может изменить его, выбрав нужный диапазон.</div>
                 </div><img src="/images/Fintrack-6.png" loading="eager" width="1285"
@@ -609,14 +625,14 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Раздел цели &amp; Детали<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.goals.title">Раздел цели &amp; Детали<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Еще один важный функциональный раздел приложения — финансовые цели. Он задуман как
+                  <div class="body-s" data-i18n="fintrack.solution.goals.p1">Еще один важный функциональный раздел приложения — финансовые цели. Он задуман как
                     инструмент для осознанного управления финансами и должен помогать пользователям не просто
                     откладывать деньги, а видеть конкретную цель и следить за прогрессом.</div>
-                  <div class="body-s">Главная задача — сформировать у людей привычку накопления, сделать ее удобной и
+                  <div class="body-s" data-i18n="fintrack.solution.goals.p2">Главная задача — сформировать у людей привычку накопления, сделать ее удобной и
                     даже немного игровой. Все это должно снизить стресс от финансового планирования, помочь достичь
                     целей и превратить деньги из абстрактных цифр в инструмент для исполнения желаний.</div>
                 </div><img src="/images/Fintrack-8.png" loading="eager" width="1285"
@@ -627,14 +643,14 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Создание цели<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.createGoal.title">Создание цели<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Создание цели представляет собой пошаговый процесс, где пользователь
+                  <div class="body-s" data-i18n="fintrack.solution.createGoal.p1">Создание цели представляет собой пошаговый процесс, где пользователь
                     последовательно вводит данные: название цели, желаемую сумму накоплений, текущий баланс, срок
                     достижения, а также дату начала накопления.</div>
-                  <div class="body-s">Такой формат минимизирует когнитивную нагрузку. Процесс заполнения максимально
+                  <div class="body-s" data-i18n-html="fintrack.solution.createGoal.p2Html">Такой формат минимизирует когнитивную нагрузку. Процесс заполнения максимально
                     прост, а прогресс бар помогает пользователю понимать, на каком этапе он находится.<br></div>
                 </div><img src="/images/Fintrack-7.png" loading="eager" width="1285"
                   sizes="(max-width: 1919px) 100vw, 1285px" alt=""
@@ -644,11 +660,11 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Настройки &amp; Профиль<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.settings.title">Настройки &amp; Профиль<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">В настройках можно изменить ключевые параметры, такие как валюту, категории трат,
+                  <div class="body-s" data-i18n="fintrack.solution.settings.desc">В настройках можно изменить ключевые параметры, такие как валюту, категории трат,
                     счета, бюджет и визуальное оформление. Авторизация необязательна: можно сразу пользоваться основными
                     функциями, а при желании — создать аккаунт для сохранения данных. Это делает приложение удобным и
                     доступным для всех.</div>
@@ -660,11 +676,11 @@
             </div>
             <div class="section-intro gap-2-rem">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Авторизация &amp; Регистрация<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="fintrack.solution.auth.title">Авторизация &amp; Регистрация<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Если пользователь хочет сразу приступить к учету своих финансов, он может начать
+                  <div class="body-s" data-i18n-html="fintrack.solution.auth.descHtml">Если пользователь хочет сразу приступить к учету своих финансов, он может начать
                     без регистрации. Однако авторизация через e-mail открывает дополнительные возможности:<br>✔
                     Сохранение данных — пользователь не потеряет информацию при смене устройства.<br>✔ Синхронизация —
                     доступ к данным с разных устройств.<br>✔ Безопасность — защита данных с помощью учетной записи.
@@ -678,17 +694,17 @@
           </div>
           <div id="result" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3 align-right">Результат<br></h1>
+              <h1 split-text="" class="heading-3 align-right" data-i18n-html="fintrack.result.title">Результат<br></h1>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Разработка <strong>Fintrack</strong> стала полноценным исследованием
+                <div class="body-s" data-i18n-html="fintrack.result.p1Html">Разработка <strong>Fintrack</strong> стала полноценным исследованием
                   пользовательских потребностей в области финансового планирования. В процессе работы я детально изучила
                   существующие решения, провела анализ поведения пользователей и выявила основные проблемы, с которыми
                   они сталкиваются. Это позволило создать продукт, который действительно упрощает контроль за финансами
                   и делает управление бюджетом удобным и понятным.</div>
-                <div class="body-s">Финальное решение — это не просто финансовый трекер, а инструмент, который помогает
+                <div class="body-s" data-i18n="fintrack.result.p2">Финальное решение — это не просто финансовый трекер, а инструмент, который помогает
                   пользователям осознанно управлять своими деньгами. Он сочетает удобство, аналитику и гибкость,
                   обеспечивая пользователям контроль над своими расходами без лишних усилий.</div>
-                <div class="body-s">Я сосредоточилась на создании интуитивного интерфейса, где каждая деталь работает на
+                <div class="body-s" data-i18n="fintrack.result.p3">Я сосредоточилась на создании интуитивного интерфейса, где каждая деталь работает на
                   удобство пользователя. Минималистичный, но информативный дизайн помогает быстро ориентироваться в
                   функционале, а продуманные сценарии взаимодействия снижают когнитивную нагрузку. Каждый экран был
                   спроектирован с учетом реальных потребностей пользователей, что позволило сделать навигацию логичной и
@@ -702,37 +718,37 @@
             <div class="section-intro horizontal align-left">
               <div class="section-intro gap-1-rem">
                 <a href="#about" class="navigation-item w-inline-block">
-                  <div class="body-xxs">О проекте</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.about">О проекте</div>
                 </a>
                 <a href="#goals" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Задача и решение</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.goals">Задача и решение</div>
                 </a>
                 <a href="#process" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Процесс проектирования</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.process">Процесс проектирования</div>
                 </a>
                 <a href="#research" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Исследование</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.research">Исследование</div>
                 </a>
                 <a href="#insights" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Инсайты</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.insights">Инсайты</div>
                 </a>
                 <a href="#problem" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Проблема</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.problem">Проблема</div>
                 </a>
                 <a href="#hypotheses" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Гипотезы</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.hypotheses">Гипотезы</div>
                 </a>
                 <a href="#benchmarking" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Анализ конкурентов</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.competitors">Анализ конкурентов</div>
                 </a>
                 <a href="#user-persona" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Персона</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.persona">Персона</div>
                 </a>
                 <a href="#solution" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Решение</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.solution">Решение</div>
                 </a>
                 <a href="#result" class="navigation-item w-inline-block">
-                  <div class="body-xxs">Результат</div>
+                  <div class="body-xxs" data-i18n="fintrack.nav.result">Результат</div>
                 </a>
               </div>
             </div>
@@ -746,16 +762,16 @@
           <div class="line-fill-2 light"></div>
         </div>
         <div class="section-intro max-100">
-          <h1 split-text="" class="heading-3 align-right">Другие проекты<br></h1>
+          <h1 split-text="" class="heading-3 align-right" data-i18n-html="common.otherProjects">Другие проекты<br></h1>
           <div id="Experience-1" class="more-works">
             <a data-w-id="32b38d3f-5dc8-ebeb-4dae-8334c367f780" href="/fintrack/" aria-current="page"
               class="case-link fintrack w-inline-block w--current">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Fintrack</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.fintrack.name">Fintrack</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Трекер финансов и целей</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.fintrack.tagline">Трекер финансов и целей</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -769,10 +785,10 @@
               class="case-link t-bank w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Т-банк</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.tbank.name">Т-банк</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Интерфейс оператора колл-центра</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.tbank.tagline">Интерфейс оператора колл-центра</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">CRM, 2023</p>
@@ -785,10 +801,10 @@
               class="case-link my-o w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Мой О!</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.oredesign.name">Мой О!</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Редизайн открытия онлайн-депозита</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.oredesign.tagline">Редизайн открытия онлайн-депозита</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2024</p>
@@ -803,10 +819,10 @@
               class="case-link freshmart w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Freshmart</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.freshmart.name">Freshmart</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Cервис доставки полезной еды</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.freshmart.tagline">Cервис доставки полезной еды</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -820,23 +836,23 @@
         </div>
         <div class="space-section"></div>
         <div class="wrapper footer-text">
-          <div class="body-xl align-center desktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
+          <div class="body-xl align-center desktop" data-i18n-html="common.footerCtaDesktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
             обсудить детали! ✨</div>
-          <div class="body-xl align-center mobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
+          <div class="body-xl align-center mobile" data-i18n="common.footerCtaMobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
             обсудить детали! ✨</div>
         </div>
         <div class="section-intro horizontal align-center">
           <div class="copyright desktop">© Kobeleva Anastasia, 2026</div>
           <div class="links">
             <a href="mailto:kobelevanastasiia@gmail.com" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Email<br></div>
+              <div class="body-s semibold" data-i18n-html="common.email">Email<br></div>
             </a>
             <a href="https://www.linkedin.com/in/anastasia-kobeleva/"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">LinkedIn<br></div>
+              <div class="body-s semibold" data-i18n-html="common.linkedin">LinkedIn<br></div>
             </a>
             <a href="https://t.me/KobelevaAnastasia" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Telegram<br></div>
+              <div class="body-s semibold" data-i18n-html="common.telegram">Telegram<br></div>
             </a>
           </div>
           <div class="copyright mobile">© Kobeleva Anastasia, 2026</div>
@@ -850,7 +866,8 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67bdb0b6c5cd56182bca4d44"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
-  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="/js/i18n.js"></script>
+  <script data-webflow-src="/js/webflow.js" type="text/javascript"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const burgerIcon = document.querySelector(".navbar_toggle");

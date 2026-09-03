@@ -1,7 +1,16 @@
 <!DOCTYPE html><!--  Last Published: Mon Mar 17 2025 08:07:20 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="67bdb0b6c5cd56182bca4d49" data-wf-site="67bdb0b6c5cd56182bca4d44">
+<html lang="ru" data-i18n-page="oredesign" data-wf-page="67bdb0b6c5cd56182bca4d49" data-wf-site="67bdb0b6c5cd56182bca4d44">
 
 <head>
+  <script>
+(function () {
+  try {
+    var l = localStorage.getItem('site-lang');
+    if (l && l !== 'ru') document.documentElement.setAttribute('data-i18n-pending', '');
+  } catch (e) {}
+})();
+</script>
+
   <meta charset="utf-8">
   <title>O! Redesign</title>
   <meta content="O! Redesign" property="og:title">
@@ -60,16 +69,23 @@
                 <a href="/" class="nav-link-2 item w-inline-block"><img loading="eager" src="/images/icon-back.svg"
                     alt="" class="icon-24">
                   <div class="nav-logo">
-                    <div class="logo-name-2">На главную</div>
+                    <div class="logo-name-2" data-i18n="nav.logoBack">На главную</div>
                   </div>
                 </a>
               </div>
               <div class="navbar_right">
                 <div class="navbar-menu-wrapper-2">
-                  <a href="/projects/" class="nav-link-2 item w-nav-link">Проекты</a>
-                  <a href="/about/" class="nav-link-2 item w-nav-link">Обо мне</a>
+                  <a href="/projects/" class="nav-link-2 item w-nav-link" data-i18n="nav.projects">Проекты</a>
+                  <a href="/about/" class="nav-link-2 item w-nav-link" data-i18n="nav.about">Обо мне</a>
                   <a href="mailto:kobelevanastasiia@gmail.com" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2ad"
                     target="_blank" class="nav-link-2 mail w-nav-link">kobelevanastasiia@gmail.com</a>
+                </div>
+                <div class="lang-switch" data-lang-switch>
+                  <button type="button" class="lang-switch-toggle nav-link-2 item" data-lang-current aria-expanded="false" aria-haspopup="listbox">RU</button>
+                  <div class="lang-switch-menu" role="listbox">
+                    <button type="button" class="lang-switch-option" data-lang="ru" data-i18n="lang.ru">RU</button>
+                    <button type="button" class="lang-switch-option" data-lang="en" data-i18n="lang.en">EN</button>
+                  </div>
                 </div>
                 <div data-delay="1000" data-hover="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2af"
                   class="navbar_dropdown w-dropdown">
@@ -84,13 +100,13 @@
                           <div class="navbar_link-wrapper-2">
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2b8-fb00c29a" class="into-view-1">
                               <a href="/projects/" class="navbar_link-3 top w-inline-block">
-                                <div class="nav-link-2 item">Проекты</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.projects">Проекты</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2bd-fb00c29a" class="into-view-1">
                               <a href="/about/" class="navbar_link-3 bottom w-inline-block">
-                                <div class="nav-link-2 item">Обо мне</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.about">Обо мне</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
@@ -101,7 +117,7 @@
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2c4-fb00c29a" class="into-view-1">
                               <a href="/documents/Kobeleva_Anastasia_CV_2026.pdf" target="_blank"
                                 class="navbar_link-3 middle w-inline-block">
-                                <div class="nav-link-2 item">Резюме</div>
+                                <div class="nav-link-2 item" data-i18n="nav.resume">Резюме</div>
                                 <div class="icon-48"><img loading="lazy" src="/images/message-text.svg" alt=""
                                     class="icon-24"></div>
                               </a>
@@ -112,7 +128,7 @@
                       <div class="wrapper">
                         <div class="navbar_drop-content _2">
                           <div class="section-intro align-center">
-                            <div class="heading-2 bold">Обсудим идеи 👋🏻</div>
+                            <div class="heading-2 bold" data-i18n="nav.discuss">Обсудим идеи 👋🏻</div>
                             <div class="icons-wrapper">
                               <a draggable="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2d0"
                                 href="mailto:kobelevanastasiia@gmail.com" target="_blank"
@@ -143,7 +159,7 @@
         <div class="project-hero-logo-title">
           <div class="company-logo-wrapper"><img src="/images/logo.svg" loading="lazy" alt="" class="company-logo">
           </div>
-          <div class="heading-2 align-center all-caps">Редизайн открытия онлайн-депозита</div>
+          <div class="heading-2 align-center all-caps" data-i18n="oredesign.hero.title">Редизайн открытия онлайн-депозита</div>
           <div class="project-hero-items">
             <div class="body-xs">UX/UI design</div>
             <div class="body-xs point">·</div>
@@ -175,9 +191,9 @@
           </div>
           <div id="about" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Контекст<br></h1>
+              <h1 split-text="" class="heading-3" data-i18n-html="oredesign.context.title">Контекст<br></h1>
               <div class="wrapper">
-                <div class="body-s"><strong>Мой O!+ Банк</strong> — это суперапп, который объединяет банковские услуги,
+                <div class="body-s" data-i18n-html="oredesign.context.p1Html"><strong>Мой O!+ Банк</strong> — это суперапп, который объединяет банковские услуги,
                   личный кабинет абонента для управления мобильной связью и маркетплейс для покупки и продажи товаров в
                   Кыргызстане. Одной из востребованных функций приложения является открытие онлайн-депозита, позволяющее
                   клиентам банка накапливать средства. Пользователи хотят быстро изучить условия, рассчитать прибыль и
@@ -189,33 +205,33 @@
           <div id="goals" class="section-container padding-2-rem">
             <div class="wrapper gap-1-rem">
               <div class="card-wrapper">
-                <div class="body-l semibold">📌 Задача</div>
+                <div class="body-l semibold" data-i18n="oredesign.goals.taskTitle">📌 Задача</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Создать удобный процесс открытия депозита, который позволит пользователю:</div>
-                  <div class="body-s">✦ Ознакомиться с условиями и параметрами депозита.</div>
-                  <div class="body-s">✦ Выбрать желаемый срок и сумму.</div>
-                  <div class="body-s">✦ Рассчитать итоговую сумму с процентами.</div>
-                  <div class="body-s">✦ Оформить депозит в пару кликов.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.taskIntro">Создать удобный процесс открытия депозита, который позволит пользователю:</div>
+                  <div class="body-s" data-i18n="oredesign.goals.task1">✦ Ознакомиться с условиями и параметрами депозита.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.task2">✦ Выбрать желаемый срок и сумму.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.task3">✦ Рассчитать итоговую сумму с процентами.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.task4">✦ Оформить депозит в пару кликов.</div>
                 </div>
               </div>
               <div class="card-wrapper">
-                <div class="body-l semibold">⚡️ Решение</div>
+                <div class="body-l semibold" data-i18n="oredesign.goals.solutionTitle">⚡️ Решение</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">Я переработала интерфейс, сделав его интуитивным и лаконичным:</div>
-                  <div class="body-s">✦ Разработала экран с ключевой информацией о депозите.</div>
-                  <div class="body-s">✦ Уделила особое внимание интерактивным элементам, благодаря которым легко
+                  <div class="body-s" data-i18n="oredesign.goals.solutionIntro">Я переработала интерфейс, сделав его интуитивным и лаконичным:</div>
+                  <div class="body-s" data-i18n="oredesign.goals.solution1">✦ Разработала экран с ключевой информацией о депозите.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.solution2">✦ Уделила особое внимание интерактивным элементам, благодаря которым легко
                     настроить параметры.</div>
-                  <div class="body-s">✦ Моментальный расчёт доходности, чтобы пользователь сразу видел, сколько он
+                  <div class="body-s" data-i18n="oredesign.goals.solution3">✦ Моментальный расчёт доходности, чтобы пользователь сразу видел, сколько он
                     накопит.</div>
-                  <div class="body-s">✦ Минимум шагов для оформления депозита.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.solution4">✦ Минимум шагов для оформления депозита.</div>
                 </div>
               </div>
               <div class="card-wrapper">
-                <div class="body-l semibold">⭐️ Результат</div>
+                <div class="body-l semibold" data-i18n="oredesign.goals.resultTitle">⭐️ Результат</div>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">✦ Пользователи быстрее принимают решение об открытии депозита.</div>
-                  <div class="body-s">✦ Сокращено время на изучение условий и расчёты.</div>
-                  <div class="body-s">✦ Улучшен пользовательский опыт, что влияет на рост количества оформленных
+                  <div class="body-s" data-i18n="oredesign.goals.result1">✦ Пользователи быстрее принимают решение об открытии депозита.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.result2">✦ Сокращено время на изучение условий и расчёты.</div>
+                  <div class="body-s" data-i18n="oredesign.goals.result3">✦ Улучшен пользовательский опыт, что влияет на рост количества оформленных
                     депозитов.</div>
                 </div>
               </div>
@@ -224,19 +240,19 @@
           <div id="audience" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3 align-right">Целевая аудитория<br></h1>
+                <h1 split-text="" class="heading-3 align-right" data-i18n-html="oredesign.audience.title">Целевая аудитория<br></h1>
               </div>
               <div class="project-table _1-row">
                 <div class="table-cell grey">
                   <div class="wrapper gap-1-rem">
-                    <div class="body-m semibold">💁‍♀️ Клиенты банка</div>
-                    <div class="body-s">Текущие пользователи, желающие быстро открыть депозит через приложение.</div>
+                    <div class="body-m semibold" data-i18n="oredesign.audience.1.title">💁‍♀️ Клиенты банка</div>
+                    <div class="body-s" data-i18n="oredesign.audience.1.desc">Текущие пользователи, желающие быстро открыть депозит через приложение.</div>
                   </div>
                 </div>
                 <div class="table-cell grey">
                   <div class="wrapper gap-1-rem">
-                    <div class="body-m semibold"> 💁 Новые пользователи</div>
-                    <div class="body-s">Люди, которые рассматривают онлайн-депозиты как альтернативу посещению
+                    <div class="body-m semibold" data-i18n="oredesign.audience.2.title"> 💁 Новые пользователи</div>
+                    <div class="body-s" data-i18n="oredesign.audience.2.desc">Люди, которые рассматривают онлайн-депозиты как альтернативу посещению
                       отделения.</div>
                   </div>
                 </div>
@@ -246,12 +262,12 @@
           <div id="current-design" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3 align-right">Текущий дизайн<br></h1>
+                <h1 split-text="" class="heading-3 align-right" data-i18n-html="oredesign.current.title">Текущий дизайн<br></h1>
               </div>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Я начала с подробного изучения текущего флоу открытия депозита в приложении, изучила
+                <div class="body-s" data-i18n="oredesign.current.p1">Я начала с подробного изучения текущего флоу открытия депозита в приложении, изучила
                   сайт, предложения и условия по депозитам. Протестировала функционал  и калькулятор.</div>
-                <div class="body-s">Сейчас открыть депозит в приложении неудобно — нет возможности сразу увидеть все
+                <div class="body-s" data-i18n="oredesign.current.p2">Сейчас открыть депозит в приложении неудобно — нет возможности сразу увидеть все
                   предложения и сравнить тарифы. Пользователи заходят, но часто уходят без оформления, потому что боятся
                   ошибиться или не понимают, как выбрать подходящий вариант.</div>
               </div><img src="/images/My-O-7-min.png" loading="eager" width="1068"
@@ -263,10 +279,10 @@
           <div id="benchmarking" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3 align-right">Бенчмаркинг<br></h1>
+                <h1 split-text="" class="heading-3 align-right" data-i18n-html="oredesign.bench.title">Бенчмаркинг<br></h1>
               </div>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Далее я провела анализ конкурентов и ознакомилась с аналогичными решениями  в других
+                <div class="body-s" data-i18n="oredesign.bench.p1">Далее я провела анализ конкурентов и ознакомилась с аналогичными решениями  в других
                   банковских приложениях. Выявила, какие моменты могут вызвать трудности  у пользователя во время
                   прохождения флоу. А также отметила для себя моменты, которые, наоборот, могут оставить положительные
                   эмоции и впечатления  от взаимодействия с интерфейсом. Я проанализировала приложения банков на местном
@@ -274,51 +290,51 @@
               </div>
             </div>
             <div class="competitor-analysis-wrapper">
-              <div class="body-s">Основные пункты, по которым я проводила UX оценку:</div>
+              <div class="body-s" data-i18n="oredesign.bench.criteriaIntro">Основные пункты, по которым я проводила UX оценку:</div>
               <div class="competitor-analysis-items-wrapper">
                 <div class="competitor-analysis-items-content">
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">📊 Наличие калькулятора для расчета прибыли</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.c1">📊 Наличие калькулятора для расчета прибыли</div>
                   </div>
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">🔍 Прозрачность условий на каждом этапе</div>
-                  </div>
-                </div>
-                <div class="competitor-analysis-items-content">
-                  <div class="competitor-analysis-item">
-                    <div class="body-xs">⏩ Простота навигации</div>
-                  </div>
-                  <div class="competitor-analysis-item">
-                    <div class="body-xs">💡 Подсказки и сопровождение в процессе</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.c2">🔍 Прозрачность условий на каждом этапе</div>
                   </div>
                 </div>
                 <div class="competitor-analysis-items-content">
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">📍 Удобство выбора суммы и срока вклада</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.c3">⏩ Простота навигации</div>
                   </div>
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">⚡️ Количество шагов для открытия депозита</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.c4">💡 Подсказки и сопровождение в процессе</div>
+                  </div>
+                </div>
+                <div class="competitor-analysis-items-content">
+                  <div class="competitor-analysis-item">
+                    <div class="body-xs" data-i18n="oredesign.bench.c5">📍 Удобство выбора суммы и срока вклада</div>
+                  </div>
+                  <div class="competitor-analysis-item">
+                    <div class="body-xs" data-i18n="oredesign.bench.c6">⚡️ Количество шагов для открытия депозита</div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="competitor-analysis-wrapper">
               <div class="wrapper">
-                <div class="body-s">Проведя анализ этих приложений, я сформулировала основные проблемы, с которыми может
+                <div class="body-s" data-i18n="oredesign.bench.problemsIntro">Проведя анализ этих приложений, я сформулировала основные проблемы, с которыми может
                   столкнуться пользователь. Среди них были такие проблемы, как:</div>
               </div>
               <div class="competitor-analysis-items-wrapper">
                 <div class="competitor-analysis-items-content">
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">😤 Сложное сравнение тарифов</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.pIssue1">😤 Сложное сравнение тарифов</div>
                   </div>
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">😤 Сложности с выбором суммы и срока</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.pIssue2">😤 Сложности с выбором суммы и срока</div>
                   </div>
                 </div>
                 <div class="competitor-analysis-items-content">
                   <div class="competitor-analysis-item">
-                    <div class="body-xs">😤 Не всегда очевидно, сколько можно накопить к концу срока</div>
+                    <div class="body-xs" data-i18n="oredesign.bench.pIssue3">😤 Не всегда очевидно, сколько можно накопить к концу срока</div>
                   </div>
                 </div>
               </div>
@@ -327,10 +343,10 @@
           <div id="scenarios" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3 align-right">Сценарии<br></h1>
+                <h1 split-text="" class="heading-3 align-right" data-i18n-html="oredesign.scenarios.title">Сценарии<br></h1>
               </div>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Далее я выделила основные фичи и определила, каким должен быть удобный и понятный
+                <div class="body-s" data-i18n="oredesign.scenarios.desc">Далее я выделила основные фичи и определила, каким должен быть удобный и понятный
                   процесс оформления онлайн-депозита. Для этого я составила список JTBD и сценарий.</div><img
                   src="/images/JTBD.png" loading="eager" width="885" sizes="(max-width: 991px) 100vw, 885px" alt=""
                   srcset="/images/97f2784af0c364a9350d63d614bf8d37_JTBD-p-500.png 500w, /images/97f2784af0c364a9350d63d614bf8d37_JTBD-p-800.png 800w, /images/JTBD.png 1770w"
@@ -341,17 +357,17 @@
           <div id="solution" class="section-container padding-2-rem section-intro">
             <div class="section-intro width-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Решение<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="oredesign.solution.title">Решение<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="heading-wrapper">
-                  <h1 split-text="" class="body-xl semibold">Онбординг скрин &amp; Раздел с депозитами<br></h1>
+                  <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.onboarding.title">Онбординг скрин &amp; Раздел с депозитами<br></h1>
                 </div>
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:</div>
-                  <div class="body-s">✦ Теперь инфо-экран объясняет ключевые преимущества функционала и условия. Он
+                  <div class="body-s" data-i18n="oredesign.solution.improvements">Улучшения:</div>
+                  <div class="body-s" data-i18n-html="oredesign.solution.onboarding.p1Html">✦ Теперь инфо-экран объясняет ключевые преимущества функционала и условия. Он
                     снижает тревожность, мотивирует к открытию вклада и направляет к целевому действию. <br></div>
-                  <div class="body-s">✦ Раздел с депозитами показывает все доступные предложения по депозитам банка, а
+                  <div class="body-s" data-i18n="oredesign.solution.onboarding.p2">✦ Раздел с депозитами показывает все доступные предложения по депозитам банка, а
                     на карточке депозита пользователь увидит основную необходимую информацию для выбора подходящего
                     депозита: мин. сумма, условия пополнения/снятия и процент. </div>
                 </div><img src="/images/My-O-1.png" loading="eager" width="1285"
@@ -362,18 +378,18 @@
             </div>
             <div class="section-intro gap-2-rem width-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Открытие депозита<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.open.title">Открытие депозита<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:</div>
-                  <div class="body-s">✦ Упрощена структура экрана: акцент на ключевых параметрах и итоговой сумме, без
+                  <div class="body-s" data-i18n="oredesign.solution.improvements">Улучшения:</div>
+                  <div class="body-s" data-i18n="oredesign.solution.open.p1">✦ Упрощена структура экрана: акцент на ключевых параметрах и итоговой сумме, без
                     перегрузки дополнительной информацией.</div>
-                  <div class="body-s">✦ Добавлено предзаполненное значение суммы и срока вклада, чтобы пользователь
+                  <div class="body-s" data-i18n="oredesign.solution.open.p2">✦ Добавлено предзаполненное значение суммы и срока вклада, чтобы пользователь
                     сразу видел конкретные цифры и мог быстрее принять решение.</div>
-                  <div class="body-s">✦ Карусель с карточками депозитов позволит удобно переключаться между разными
+                  <div class="body-s" data-i18n-html="oredesign.solution.open.p3Html">✦ Карусель с карточками депозитов позволит удобно переключаться между разными
                     условиями.<br></div>
-                  <div class="body-s">✦ Пользователь может ознакомиться с полными условиями депозита. Для оптимизации
+                  <div class="body-s" data-i18n-html="oredesign.solution.open.p4Html">✦ Пользователь может ознакомиться с полными условиями депозита. Для оптимизации
                     пространства, условия вынесены на отдельный экран.<br></div>
                 </div><img src="/images/My-O-2.png" loading="eager" width="1285"
                   sizes="(max-width: 1919px) 100vw, 1285px" alt=""
@@ -383,12 +399,12 @@
             </div>
             <div class="section-intro gap-2-rem width-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Выбор условий<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.terms.title">Выбор условий<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:</div>
-                  <div class="body-s">✦ При выборе срока депозита и валюты отображается соответствующая процентная
+                  <div class="body-s" data-i18n="oredesign.solution.improvements">Улучшения:</div>
+                  <div class="body-s" data-i18n="oredesign.solution.terms.p1">✦ При выборе срока депозита и валюты отображается соответствующая процентная
                     ставка. Это позволяет пользователю быстро оценить выгоду и принять решение без лишних действий.
                   </div>
                 </div><img src="/images/My-O-3.png" loading="eager" width="1285"
@@ -399,13 +415,13 @@
             </div>
             <div class="section-intro gap-2-rem width-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Ввод суммы<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.amount.title">Ввод суммы<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:</div>
-                  <div class="body-s">✦ Простой и интуитивный ввод, автоматическое открытие клавиатуры, чистый UI.</div>
-                  <div class="body-s">✦ Удобные табы с суммами, ускоряющие процесс заполнения.</div>
+                  <div class="body-s" data-i18n="oredesign.solution.improvements">Улучшения:</div>
+                  <div class="body-s" data-i18n="oredesign.solution.amount.p1">✦ Простой и интуитивный ввод, автоматическое открытие клавиатуры, чистый UI.</div>
+                  <div class="body-s" data-i18n="oredesign.solution.amount.p2">✦ Удобные табы с суммами, ускоряющие процесс заполнения.</div>
                 </div><img src="/images/My-O-4.png" loading="eager" width="1285"
                   sizes="(max-width: 1919px) 100vw, 1285px" alt=""
                   srcset="/images/My-O-4-p-500.png 500w, /images/My-O-4-p-800.png 800w, /images/My-O-4-p-1080.png 1080w, /images/My-O-4.png 2730w"
@@ -414,12 +430,12 @@
             </div>
             <div class="section-intro max-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Выбор счета списания<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.account.title">Выбор счета списания<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:<br></div>
-                  <div class="body-s">✦ Оптимизирован UI, выбор счета через модальное окно.</div>
+                  <div class="body-s" data-i18n-html="oredesign.solution.improvementsHtml">Улучшения:<br></div>
+                  <div class="body-s" data-i18n="oredesign.solution.account.p1">✦ Оптимизирован UI, выбор счета через модальное окно.</div>
                 </div><img src="/images/My-O-5.png" loading="eager" width="1285"
                   sizes="(max-width: 1919px) 100vw, 1285px" alt=""
                   srcset="/images/My-O-5-p-500.png 500w, /images/My-O-5-p-800.png 800w, /images/My-O-5-p-1080.png 1080w, /images/My-O-5.png 2730w"
@@ -428,12 +444,12 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">OTP &amp; Экран успеха<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="oredesign.solution.otp.title">OTP &amp; Экран успеха<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-0-5-rem">
-                  <div class="body-s">Улучшения:</div>
-                  <div class="body-s">✦ Экран успеха сообщает пользователю, что вклад успешно открыт. Его основная
+                  <div class="body-s" data-i18n="oredesign.solution.improvements">Улучшения:</div>
+                  <div class="body-s" data-i18n-html="oredesign.solution.otp.p1Html">✦ Экран успеха сообщает пользователю, что вклад успешно открыт. Его основная
                     функция — <strong>уведомить о завершении процесса</strong> и направить пользователя дальше.</div>
                 </div><img src="/images/My-O-6.png" loading="eager" width="1285"
                   sizes="(max-width: 1919px) 100vw, 1285px" alt=""
@@ -444,14 +460,14 @@
           </div>
           <div id="result" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3 align-right">Результат<br></h1>
+              <h1 split-text="" class="heading-3 align-right" data-i18n-html="oredesign.result.title">Результат<br></h1>
               <div class="wrapper gap-1-rem">
-                <div class="body-s">Редизайн сделал процесс открытия онлайн-депозита более прозрачным и удобным. Я
+                <div class="body-s" data-i18n="oredesign.result.p1">Редизайн сделал процесс открытия онлайн-депозита более прозрачным и удобным. Я
                   переработала интерфейс, чтобы пользователь мог быстрее разобраться в условиях, сразу видеть ключевые
                   параметры и оперативно принять решение.</div>
-                <div class="body-s">Одна из важных задач — минимизировать любые точки сопротивления. Теперь расчёты
+                <div class="body-s" data-i18n="oredesign.result.p2">Одна из важных задач — минимизировать любые точки сопротивления. Теперь расчёты
                   стали нагляднее, а навигация проще, что сократило время на оформление вклада.</div>
-                <div class="body-s">Вместо перегруженных экранов с лишними деталями я сфокусировалась на чёткой подаче
+                <div class="body-s" data-i18n="oredesign.result.p3">Вместо перегруженных экранов с лишними деталями я сфокусировалась на чёткой подаче
                   информации и понятных шагах. В итоге клиенты быстрее проходят процесс открытия депозита, а удобство
                   взаимодействия повышает вовлечённость и доверие к приложению.</div>
               </div>
@@ -461,28 +477,28 @@
         <div class="navigation-container">
           <div class="section-intro max-100 gap-1 position-sticky">
             <a href="#about" class="navigation-item w-inline-block">
-              <div class="body-xxs">О проекте</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.about">О проекте</div>
             </a>
             <a href="#goals" class="navigation-item w-inline-block">
-              <div class="body-xxs">Задача и решение</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.goals">Задача и решение</div>
             </a>
             <a href="#audience" class="navigation-item w-inline-block">
-              <div class="body-xxs">Аудитория</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.audience">Аудитория</div>
             </a>
             <a href="#current-design" class="navigation-item w-inline-block">
-              <div class="body-xxs">Текущий дизайн</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.current">Текущий дизайн</div>
             </a>
             <a href="#benchmarking" class="navigation-item w-inline-block">
-              <div class="body-xxs">Бенчмаркинг</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.bench">Бенчмаркинг</div>
             </a>
             <a href="#scenarios" class="navigation-item w-inline-block">
-              <div class="body-xxs">Сценарии</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.scenarios">Сценарии</div>
             </a>
             <a href="#solution" class="navigation-item w-inline-block">
-              <div class="body-xxs">Решение</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.solution">Решение</div>
             </a>
             <a href="#result" class="navigation-item w-inline-block">
-              <div class="body-xxs">Результат</div>
+              <div class="body-xxs" data-i18n="oredesign.nav.result">Результат</div>
             </a>
           </div>
         </div>
@@ -494,16 +510,16 @@
           <div class="line-fill-2 light"></div>
         </div>
         <div class="section-intro max-100">
-          <h1 split-text="" class="heading-3 align-right">Другие проекты<br></h1>
+          <h1 split-text="" class="heading-3 align-right" data-i18n-html="common.otherProjects">Другие проекты<br></h1>
           <div id="Experience-1" class="more-works">
             <a data-w-id="32b38d3f-5dc8-ebeb-4dae-8334c367f780" href="/fintrack/"
               class="case-link fintrack w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Fintrack</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.fintrack.name">Fintrack</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Трекер финансов и целей</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.fintrack.tagline">Трекер финансов и целей</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -517,10 +533,10 @@
               class="case-link t-bank w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Т-банк</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.tbank.name">Т-банк</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Интерфейс оператора колл-центра</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.tbank.tagline">Интерфейс оператора колл-центра</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">CRM, 2023</p>
@@ -533,10 +549,10 @@
               class="case-link my-o w-inline-block w--current">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Мой О!</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.oredesign.name">Мой О!</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Редизайн открытия онлайн-депозита</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.oredesign.tagline">Редизайн открытия онлайн-депозита</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2024</p>
@@ -551,10 +567,10 @@
               class="case-link freshmart w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Freshmart</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.freshmart.name">Freshmart</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Cервис доставки полезной еды</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.freshmart.tagline">Cервис доставки полезной еды</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -568,23 +584,23 @@
         </div>
         <div class="space-section"></div>
         <div class="wrapper footer-text">
-          <div class="body-xl align-center desktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
+          <div class="body-xl align-center desktop" data-i18n-html="common.footerCtaDesktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
             обсудить детали! ✨</div>
-          <div class="body-xl align-center mobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
+          <div class="body-xl align-center mobile" data-i18n="common.footerCtaMobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
             обсудить детали! ✨</div>
         </div>
         <div class="section-intro horizontal align-center">
           <div class="copyright desktop">© Kobeleva Anastasia, 2026</div>
           <div class="links">
             <a href="mailto:kobelevanastasiia@gmail.com" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Email<br></div>
+              <div class="body-s semibold" data-i18n-html="common.email">Email<br></div>
             </a>
             <a href="https://www.linkedin.com/in/anastasia-kobeleva/"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">LinkedIn<br></div>
+              <div class="body-s semibold" data-i18n-html="common.linkedin">LinkedIn<br></div>
             </a>
             <a href="https://t.me/KobelevaAnastasia" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Telegram<br></div>
+              <div class="body-s semibold" data-i18n-html="common.telegram">Telegram<br></div>
             </a>
           </div>
           <div class="copyright mobile">© Kobeleva Anastasia, 2026</div>
@@ -598,7 +614,8 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67bdb0b6c5cd56182bca4d44"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
-  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="/js/i18n.js"></script>
+  <script data-webflow-src="/js/webflow.js" type="text/javascript"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const burgerIcon = document.querySelector(".navbar_toggle");

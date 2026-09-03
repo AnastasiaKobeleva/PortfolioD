@@ -1,7 +1,15 @@
 <!DOCTYPE html><!--  Last Published: Mon Mar 17 2025 08:07:20 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="67bdb0b6c5cd56182bca4d4d" data-wf-site="67bdb0b6c5cd56182bca4d44">
+<html lang="ru" data-i18n-page="about" data-wf-page="67bdb0b6c5cd56182bca4d4d" data-wf-site="67bdb0b6c5cd56182bca4d44">
 
 <head>
+  <script>
+    (function () {
+      try {
+        var l = localStorage.getItem('site-lang');
+        if (l && l !== 'ru') document.documentElement.setAttribute('data-i18n-pending', '');
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="utf-8">
   <title>About me</title>
   <meta content="About me" property="og:title">
@@ -40,16 +48,23 @@
                 <a href="/" class="nav-link-2 item w-inline-block"><img loading="eager" src="/images/icon-back.svg"
                     alt="" class="icon-24">
                   <div class="nav-logo">
-                    <div class="logo-name-2">На главную</div>
+                    <div class="logo-name-2" data-i18n="nav.logoBack">На главную</div>
                   </div>
                 </a>
               </div>
               <div class="navbar_right">
                 <div class="navbar-menu-wrapper-2">
-                  <a href="/projects/" class="nav-link-2 item w-nav-link">Проекты</a>
-                  <a href="/about/" aria-current="page" class="nav-link-2 item w-nav-link w--current">Обо мне</a>
+                  <a href="/projects/" class="nav-link-2 item w-nav-link" data-i18n="nav.projects">Проекты</a>
+                  <a href="/about/" aria-current="page" class="nav-link-2 item w-nav-link w--current" data-i18n="nav.about">Обо мне</a>
                   <a href="mailto:kobelevanastasiia@gmail.com" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2ad"
                     target="_blank" class="nav-link-2 mail w-nav-link">kobelevanastasiia@gmail.com</a>
+                </div>
+                <div class="lang-switch" data-lang-switch>
+                  <button type="button" class="lang-switch-toggle nav-link-2 item" data-lang-current aria-expanded="false" aria-haspopup="listbox" aria-label="Language">RU</button>
+                  <div class="lang-switch-menu" role="listbox">
+                    <button type="button" class="lang-switch-option" data-lang="en" data-i18n="lang.en">EN</button>
+                    <button type="button" class="lang-switch-option" data-lang="ru" data-i18n="lang.ru">RU</button>
+                  </div>
                 </div>
                 <div data-delay="1000" data-hover="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2af"
                   class="navbar_dropdown w-dropdown">
@@ -64,14 +79,14 @@
                           <div class="navbar_link-wrapper-2">
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2b8-fb00c29a" class="into-view-1">
                               <a href="/projects/" class="navbar_link-3 top w-inline-block">
-                                <div class="nav-link-2 item">Проекты</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.projects">Проекты</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2bd-fb00c29a" class="into-view-1">
                               <a href="/about/" aria-current="page"
                                 class="navbar_link-3 bottom w-inline-block w--current">
-                                <div class="nav-link-2 item">Обо мне</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.about">Обо мне</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
@@ -82,7 +97,7 @@
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2c4-fb00c29a" class="into-view-1">
                               <a href="/documents/Kobeleva_Anastasia_CV_2026.pdf" target="_blank"
                                 class="navbar_link-3 middle w-inline-block">
-                                <div class="nav-link-2 item">Резюме</div>
+                                <div class="nav-link-2 item" data-i18n="nav.resume">Резюме</div>
                                 <div class="icon-48"><img loading="lazy" src="/images/message-text.svg" alt=""
                                     class="icon-24"></div>
                               </a>
@@ -93,7 +108,7 @@
                       <div class="wrapper">
                         <div class="navbar_drop-content _2">
                           <div class="section-intro align-center">
-                            <div class="heading-2 bold">Обсудим идеи 👋🏻</div>
+                            <div class="heading-2 bold" data-i18n="nav.discuss">Обсудим идеи 👋🏻</div>
                             <div class="icons-wrapper">
                               <a draggable="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2d0"
                                 href="mailto:kobelevanastasiia@gmail.com" target="_blank"
@@ -129,17 +144,17 @@
           <div class="section-intro">
             <div class="wrapper gap-1-rem max-100">
               <div class="heading-wrapper">
-                <h1 split-text="" class="body-xl semibold">Кобелева Анастасия<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="about.hero.name">Кобелева Анастасия<br></h1>
               </div>
-              <div class="body-m semibold">Продуктовый дизайнер</div>
-              <div class="body-s">В дизайне я более 5 лет, 2 из них в финтехе. Мой подход к дизайну основан на глубоком
+              <div class="body-m semibold" data-i18n="about.hero.role">Продуктовый дизайнер</div>
+              <div class="body-s" data-i18n="about.hero.bio">В дизайне я более 5 лет, 2 из них в финтехе. Мой подход к дизайну основан на глубоком
                 исследовании пользователей, бизнес-целей и технологических возможностей. Я уверена, что отличный
                 продуктовый дизайн — это не только красивые интерфейсы, но и тщательно продуманная логика
                 взаимодействия, которая делает использование продукта простым и интуитивно понятным.</div>
             </div>
             <a href="/documents/Kobeleva_Anastasia_CV_2026.pdf" target="_blank"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Резюме / CV<br></div><img loading="lazy" src="/images/icon-download.svg"
+              <div class="body-s semibold" data-i18n-html="about.hero.cv">Резюме / CV<br></div><img loading="lazy" src="/images/icon-download.svg"
                 alt="" class="icon-24">
             </a>
           </div>
@@ -149,10 +164,10 @@
           <div class="tabs-menu w-tab-menu">
             <a data-w-tab="Resume" id="Resume" data-tab="resume"
               class="tab-link-resume w-inline-block w-tab-link w--current">
-              <div class="body-m">Мой опыт</div>
+              <div class="body-m" data-i18n="about.tabs.experience">Мой опыт</div>
             </a>
             <a data-w-tab="About" id="About" data-tab="about" class="tab-link-about w-inline-block w-tab-link">
-              <div class="body-m">Обо мне</div>
+              <div class="body-m" data-i18n="about.tabs.about">Обо мне</div>
             </a>
           </div>
           <div class="tabs-content w-tab-content">
@@ -161,7 +176,7 @@
                 <div class="about-content-wrapper">
                   <div class="about-work-experience-wrapper">
                     <div class="heading-wrapper max-62">
-                      <h1 split-text="" class="body-xl semibold">Опыт работы<br></h1>
+                      <h1 split-text="" class="body-xl semibold" data-i18n-html="about.experience.title">Опыт работы<br></h1>
                     </div>
                     <div class="about-line-divider">
                       <div class="line-fill-4 light"></div>
@@ -175,15 +190,15 @@
                           <div class="body-m semibold company">KR Digital</div><img loading="lazy"
                             src="/images/Frame-960.svg" alt="" class="icon-arrow">
                         </a>
-                        <div class="body-xs light-grey">Май 2025 – н.в.</div>
+                        <div class="body-xs light-grey" data-i18n="home.exp.kr.period">Май 2025 – н.в.</div>
                       </div>
                       <div class="wrapper gap-1-rem">
                         <div class="body-m semibold">Senior Product Designer</div>
-                        <div class="body-xs">KR Digital — цифровая студия, специализирующаяся на создании инновационных решений. </div>
-                        <div class="body-xs"><span class="light-grey">Ключевые задачи:</span> Проектировать и развивать сложные цифровые продукты для крупных корпоративных и гос. заказчиков.
+                        <div class="body-xs" data-i18n="about.exp.kr.about">KR Digital — цифровая студия, специализирующаяся на создании инновационных решений. </div>
+                        <div class="body-xs" data-i18n-html="about.exp.kr.tasksHtml"><span class="light-grey">Ключевые задачи:</span> Проектировать и развивать сложные цифровые продукты для крупных корпоративных и гос. заказчиков.
 Прорабатывать пользовательские сценарии, бизнес-логику и новый функционал с большим количеством состояний и ограничений.</div>
-                        <div class="body-xs"><span class="light-grey">Решение:</span> <br>— ДИТ Москвы: разработала новый функционал для внутренних систем управления задачами (аналог Jira) и знаниями (аналог Confluence). Один из наиболее масштабных модулей — редактор рабочих процессов с настройкой валидаторов и постфункций; проработала структуру, состояния, зависимости и логику конфигурации сложных бизнес-правил.<br>— Мособлгаз: развивала мобильный и веб-личный кабинет; участвовала во внедрении чата с ИИ-помощником.<br>— Приложение для мигрантов: спроектировала сценарии отслеживания статуса патента, загрузки документов и прохождения многошаговых процессов.<br></div>
-                        <div class="body-xs"><span class="light-grey">Результат:</span> <br>— Перевела сложную логику настройки рабочих процессов — с валидаторами, постфункциями, зависимостями и бизнес-ограничениями — в целостный интерфейс управления.<br>— Спроектировала и развила пользовательские сценарии для продуктов с разными аудиториями и предметными областями — от внутренних корпоративных систем до массовых мобильных приложений.<br></div>
+                        <div class="body-xs" data-i18n-html="about.exp.kr.solutionHtml"><span class="light-grey">Решение:</span> <br>— ДИТ Москвы: разработала новый функционал для внутренних систем управления задачами (аналог Jira) и знаниями (аналог Confluence). Один из наиболее масштабных модулей — редактор рабочих процессов с настройкой валидаторов и постфункций; проработала структуру, состояния, зависимости и логику конфигурации сложных бизнес-правил.<br>— Мособлгаз: развивала мобильный и веб-личный кабинет; участвовала во внедрении чата с ИИ-помощником.<br>— Приложение для мигрантов: спроектировала сценарии отслеживания статуса патента, загрузки документов и прохождения многошаговых процессов.<br></div>
+                        <div class="body-xs" data-i18n-html="about.exp.kr.resultHtml"><span class="light-grey">Результат:</span> <br>— Перевела сложную логику настройки рабочих процессов — с валидаторами, постфункциями, зависимостями и бизнес-ограничениями — в целостный интерфейс управления.<br>— Спроектировала и развила пользовательские сценарии для продуктов с разными аудиториями и предметными областями — от внутренних корпоративных систем до массовых мобильных приложений.<br></div>
                       </div>
                     </div>
                     <div class="about-work-experience-wrapper mobile-none">
@@ -200,21 +215,21 @@
                           <div class="body-m semibold company">MINVEST</div><img loading="lazy"
                             src="/images/Frame-960.svg" alt="" class="icon-arrow">
                         </a>
-                        <div class="body-xs light-grey">Июль 2024 – Февраль 2025</div>
+                        <div class="body-xs light-grey" data-i18n="home.exp.minvest.period">Июль 2024 – Февраль 2025</div>
                       </div>
                       <div class="wrapper gap-1-rem">
                         <div class="body-m semibold">Middle+ Product Designer</div>
-                        <div class="body-xs">MINVEST — первая цифровая брокерская платформа в Кыргызстане. </div>
-                        <div class="body-xs"><span class="light-grey">Ключевые задачи:</span> Запустить инвестиционную
+                        <div class="body-xs" data-i18n="about.exp.minvest.about">MINVEST — первая цифровая брокерская платформа в Кыргызстане. </div>
+                        <div class="body-xs" data-i18n-html="about.exp.minvest.tasksHtml"><span class="light-grey">Ключевые задачи:</span> Запустить инвестиционную
                           платформу с интуитивно понятным интерфейсом. Привлечь <span class="light-grey">X</span> <span
                             class="light-grey">тыс.</span> активных пользователей к концу года. Разработать веб-сайт и
                           внутреннюю CRM-систему для быстрой и удобной работы сотрудников.</div>
-                        <div class="body-xs"><span class="light-grey">Решение:</span> <br>— Участвовала в разработке
+                        <div class="body-xs" data-i18n-html="about.exp.minvest.solutionHtml"><span class="light-grey">Решение:</span> <br>— Участвовала в разработке
                           дизайна основного функционала приложения.<br>— Развивала и совершенствовала внутреннюю
                           CRM-систему на основе обратной связи от команды.<br>— Проводила UX-исследования (интервью,
                           юзабилити-тесты, A/B-тестирования) для повышения удобства использования.<br>— Разрабатывала и
                           улучшала сайт, образовательную платформу и общую дизайн-стратегию бренда.<br></div>
-                        <div class="body-xs"><span class="light-grey">Результат:</span> <br>— Успешный запуск продукта с
+                        <div class="body-xs" data-i18n-html="about.exp.minvest.resultHtml"><span class="light-grey">Результат:</span> <br>— Успешный запуск продукта с
                           полноценным функционалом для торговли и аналитики.<br>— Высокая конверсия в активацию
                           благодаря интуитивно понятному интерфейсу и упрощенному процессу регистрации.<br>— Рост
                           вовлеченности пользователей за счет улучшенного UX.<br>— <span class="light-grey">X
@@ -232,22 +247,22 @@
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper gap-1-rem">
                         <a href="https://ipc.kg/" target="_blank" class="company-link ipc w-inline-block">
-                          <div class="body-m semibold company max-80">Межбанковский процессинговый центр</div><img
+                          <div class="body-m semibold company max-80" data-i18n="home.exp.ipc.company">Межбанковский процессинговый центр</div><img
                             loading="lazy" src="/images/Frame-960.svg" alt="" class="icon-arrow absolute">
                         </a>
-                        <div class="body-xs light-grey">Июль 2023 – Июль 2024</div>
+                        <div class="body-xs light-grey" data-i18n="home.exp.ipc.period">Июль 2023 – Июль 2024</div>
                       </div>
                       <div class="wrapper gap-1-rem">
                         <div class="body-m semibold">Middle Product Designer</div>
-                        <div class="body-xs">Элкарт Мобайл — мобильное финансовое приложение для денежных переводов и
+                        <div class="body-xs" data-i18n="about.exp.ipc.about">Элкарт Мобайл — мобильное финансовое приложение для денежных переводов и
                           платежей в Кыргызстане с активной аудиторией более 300 тыс. пользователей.</div>
-                        <div class="body-xs"><span class="light-grey">Ключевые задачи:</span> Повышение удобства и
+                        <div class="body-xs" data-i18n-html="about.exp.ipc.tasksHtml"><span class="light-grey">Ключевые задачи:</span> Повышение удобства и
                           функциональности приложения через редизайн и разработку новых сервисов.</div>
-                        <div class="body-xs"><span class="light-grey">Решение:<br></span>— Провела полный редизайн,
+                        <div class="body-xs" data-i18n-html="about.exp.ipc.solutionHtml"><span class="light-grey">Решение:<br></span>— Провела полный редизайн,
                           улучшив юзабилити и визуальную привлекательность.<br>— Разработала дизайн новых сервисов.<br>—
                           Проводила пользовательские исследования и юзабилити-тестирование для выявления проблемных мест
                           и оптимизации взаимодействия пользователей с банковскими услугами.</div>
-                        <div class="body-xs"><span class="light-grey">Результат:</span> <br>— Успешно улучшила удобство
+                        <div class="body-xs" data-i18n-html="about.exp.ipc.resultHtml"><span class="light-grey">Результат:</span> <br>— Успешно улучшила удобство
                           использования приложения, что привело к повышению удовлетворенности и вовлеченности
                           пользователей.<br>— Расширение возможностей приложения за счет запуска новых разделов с
                           сервисами и государственных услуг привело к росту новых активных пользователей.<br>—
@@ -267,14 +282,14 @@
                           <div class="body-m semibold company">JetStyle</div><img loading="lazy"
                             src="/images/Frame-960.svg" alt="" class="icon-arrow">
                         </a>
-                        <div class="body-xs light-grey">Апрель 2022 – Июль 2023</div>
+                        <div class="body-xs light-grey" data-i18n="home.exp.jetstyle.period">Апрель 2022 – Июль 2023</div>
                       </div>
                       <div class="wrapper gap-1-rem">
                         <div class="body-m semibold">UX/UI Designer</div>
-                        <div class="body-xs">JetStyle — цифровое агентство, специализирующееся на UX/UI-дизайне,
+                        <div class="body-xs" data-i18n="about.exp.jetstyle.about">JetStyle — цифровое агентство, специализирующееся на UX/UI-дизайне,
                           веб-разработке и digital-маркетинге. Я разрабатывала интерфейсы для e-commerce,
                           здравоохранения и сервисов доставки (мобильные приложения, веб-сайты и онлайн-магазины).</div>
-                        <div class="body-xs"><span class="light-grey">Ключевые задачи и достижения:<br>‍</span>— Провела
+                        <div class="body-xs" data-i18n-html="about.exp.jetstyle.tasksHtml"><span class="light-grey">Ключевые задачи и достижения:<br>‍</span>— Провела
                           редизайн платформ, что привело к росту конверсии и вовлеченности пользователей.<br>— Проводила
                           UX-аудиты и пользовательские исследования для выявления проблемных зон и улучшения удобства
                           использования.<br>— Презентовала и аргументировала дизайн-решения перед стейкхолдерами и
@@ -293,13 +308,13 @@
                         <a href="#" class="company-link self-employed w-inline-block">
                           <div class="body-m semibold company">Self-employed</div>
                         </a>
-                        <div class="body-xs light-grey">Январь 2021 – Июль 2022</div>
+                        <div class="body-xs light-grey" data-i18n="home.exp.self.period">Январь 2021 – Июль 2022</div>
                       </div>
                       <div class="wrapper gap-1-rem">
                         <div class="body-m semibold">UX/UI Designer</div>
-                        <div class="body-xs">Разрабатывала дизайн-концепции для различных проектов, включая создание и
+                        <div class="body-xs" data-i18n="about.exp.self.about">Разрабатывала дизайн-концепции для различных проектов, включая создание и
                           подготовку макетов, а также их адаптацию для разных платформ.</div>
-                        <div class="body-xs">— Проводила анализ конкурентов, исследование рынка и интервью с
+                        <div class="body-xs" data-i18n-html="about.exp.self.bulletsHtml">— Проводила анализ конкурентов, исследование рынка и интервью с
                           пользователями.<br>— Разрабатывала CJM, персоны пользователей и карты эмпатии для эффективного
                           понимания и удовлетворения потребностей пользователей.<br>— Готовила презентации и
                           обосновывала дизайн-решения для клиентов.<br></div>
@@ -310,21 +325,21 @@
                 <div class="about-content-wrapper">
                   <div class="about-work-experience-wrapper">
                     <div class="heading-wrapper max-62">
-                      <h1 split-text="" class="body-xl semibold">Образование<br></h1>
+                      <h1 split-text="" class="body-xl semibold" data-i18n-html="about.education.title">Образование<br></h1>
                     </div>
                     <div class="about-line-divider">
                       <div class="line-fill-4 light"></div>
                     </div>
                   </div>
                   <div class="wrapper gap-1-rem mobile-card">
-                    <div class="body-m semibold">Уральский государственный архитектурно-художественный университет</div>
-                    <div class="body-xs">Художник станковой живописи <span class="light-grey">(2016–2022)</span></div>
+                    <div class="body-m semibold" data-i18n="about.education.school">Уральский государственный архитектурно-художественный университет</div>
+                    <div class="body-xs" data-i18n-html="about.education.degreeHtml">Художник станковой живописи <span class="light-grey">(2016–2022)</span></div>
                   </div>
                 </div>
                 <div class="about-content-wrapper">
                   <div class="about-work-experience-wrapper">
                     <div class="heading-wrapper max-62">
-                      <h1 split-text="" class="body-xl semibold">Навыки<br></h1>
+                      <h1 split-text="" class="body-xl semibold" data-i18n-html="about.skills.title">Навыки<br></h1>
                     </div>
                     <div class="about-line-divider">
                       <div class="line-fill-4 light"></div>
@@ -333,10 +348,10 @@
                   <div class="wrapper">
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper">
-                        <div class="body-m semibold">UI-дизайн</div>
+                        <div class="body-m semibold" data-i18n="about.skills.ui.title">UI-дизайн</div>
                       </div>
                       <div class="wrapper">
-                        <div class="body-xs">У меня есть четкое понимание принципов визуального дизайна, включая теорию
+                        <div class="body-xs" data-i18n="about.skills.ui.desc">У меня есть четкое понимание принципов визуального дизайна, включая теорию
                           цвета, композицию и типографику. Стремлюсь создавать визуально приятные дизайны, которые
                           эффективно взаимодействуют с целевой аудиторией. Я всегда учусь и ищу способы улучшить свои
                           навыки.</div>
@@ -351,10 +366,10 @@
                     </div>
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper">
-                        <div class="body-m semibold">UX-исследования</div>
+                        <div class="body-m semibold" data-i18n="about.skills.ux.title">UX-исследования</div>
                       </div>
                       <div class="wrapper">
-                        <div class="body-xs">Применяю принципы UX-дизайна для создания интуитивных и удобных
+                        <div class="body-xs" data-i18n="about.skills.ux.desc">Применяю принципы UX-дизайна для создания интуитивных и удобных
                           интерфейсов. Исследования, прототипирование и юзабилити-тестирование помогают мне находить
                           оптимальные решения и делать продукт по-настоящему комфортным для пользователей.</div>
                       </div>
@@ -368,10 +383,10 @@
                     </div>
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper max-80">
-                        <div class="body-m semibold">Графический дизайн и иллюстрации</div>
+                        <div class="body-m semibold" data-i18n="about.skills.graphic.title">Графический дизайн и иллюстрации</div>
                       </div>
                       <div class="wrapper">
-                        <div class="body-xs">Имею художественное образование, владею навыками создания 2D и 3D
+                        <div class="body-xs" data-i18n="about.skills.graphic.desc">Имею художественное образование, владею навыками создания 2D и 3D
                           иллюстраций, иконок и различных графических материалов. Благодаря этому могу внедрять
                           визуальные элементы в интерфейсы и повышать отклик пользователей.</div>
                       </div>
@@ -385,10 +400,10 @@
                     </div>
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper">
-                        <div class="body-m semibold">Инструменты</div>
+                        <div class="body-m semibold" data-i18n="about.skills.tools.title">Инструменты</div>
                       </div>
                       <div class="wrapper">
-                        <div class="body-xs">Figma, Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Spline,
+                        <div class="body-xs" data-i18n="about.skills.tools.desc">Figma, Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Spline,
                           Webflow, Basic HTML &amp; CSS.</div>
                       </div>
                     </div>
@@ -401,10 +416,10 @@
                     </div>
                     <div class="about-work-experience-wrapper mobile-card">
                       <div class="wrapper">
-                        <div class="body-m semibold">Языки</div>
+                        <div class="body-m semibold" data-i18n="about.skills.langs.title">Языки</div>
                       </div>
                       <div class="wrapper">
-                        <div class="body-xs">English — B2, Russian Native.</div>
+                        <div class="body-xs" data-i18n="about.skills.langs.desc">English — B2, Russian Native.</div>
                       </div>
                     </div>
                   </div>
@@ -419,14 +434,14 @@
                 <div class="section-intro">
                   <div class="_2-columns-wrapper-about">
                     <div class="wrapper">
-                      <div class="body-s">Я всегда стараюсь смотреть на продукт глазами пользователя — как им будет
+                      <div class="body-s" data-i18n="about.bio.p1">Я всегда стараюсь смотреть на продукт глазами пользователя — как им будет
                         удобно, где могут возникнуть сложности и как сделать опыт взаимодействия приятным. Люблю
                         копаться в деталях, изучать, как работает продукт, проводить исследования и находить решения,
                         которые действительно помогают людям.</div>
-                      <div class="body-s">Мне важно работать в команде — обсуждать идеи, задавать вопросы и вместе
+                      <div class="body-s" data-i18n="about.bio.p2">Мне важно работать в команде — обсуждать идеи, задавать вопросы и вместе
                         искать лучшие решения. Я верю, что хорошая коммуникация и совместная работа делают продукт
                         сильнее.</div>
-                      <div class="body-s">Помимо дизайна я увлекаюсь искусством, музыкой и постоянно изучаю что-то
+                      <div class="body-s" data-i18n="about.bio.p3">Помимо дизайна я увлекаюсь искусством, музыкой и постоянно изучаю что-то
                         новое. В свободное время рисую, изучаю 3D и исследую новые инструменты для визуализации идей.
                       </div>
                     </div><img width="750" sizes="100vw" alt="" src="/images/IMG_7303-2_1.webp" loading="eager"
@@ -436,10 +451,10 @@
                 </div>
                 <div class="about-me-content-wrapper">
                   <div class="section-intro horizontal about-me">
-                    <h1 split-text="" class="body-m semibold">Что меня вдохновляет?<br></h1>
+                    <h1 split-text="" class="body-m semibold" data-i18n-html="about.inspire.title">Что меня вдохновляет?<br></h1>
                     <div class="wrapper max-70">
                       <div class="wrapper">
-                        <div class="body-s">У меня высшее образование в сфере изобразительного искусства, поэтому я
+                        <div class="body-s" data-i18n="about.inspire.desc">У меня высшее образование в сфере изобразительного искусства, поэтому я
                           особенно ценю баланс между функциональностью и эстетикой в дизайне. Искусство и музыка
                           вдохновляют меня, помогают находить свежие идеи и создавать более выразительные цифровые
                           решения. Мне нравится, что продуктовый дизайн сочетает в себе креативность, аналитику и
@@ -462,9 +477,9 @@
           <div class="line-fill-2 light"></div>
         </div>
         <div class="wrapper footer-text">
-          <div class="body-xl align-center desktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
+          <div class="body-xl align-center desktop" data-i18n-html="common.footerCtaDesktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
             обсудить детали! ✨</div>
-          <div class="body-xl align-center mobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
+          <div class="body-xl align-center mobile" data-i18n="common.footerCtaMobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
             обсудить детали! ✨</div>
         </div>
         <div class="section-intro horizontal align-center">
@@ -472,14 +487,14 @@
           <div class="links">
             <a href="mailto:kobelevanastasiia@gmail.com" target="_blank"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Email<br></div>
+              <div class="body-s semibold" data-i18n-html="common.email">Email<br></div>
             </a>
             <a href="https://www.linkedin.com/in/anastasia-kobeleva/" target="_blank"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">LinkedIn<br></div>
+              <div class="body-s semibold" data-i18n-html="common.linkedin">LinkedIn<br></div>
             </a>
             <a href="https://t.me/KobelevaAnastasia" target="_blank" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Telegram<br></div>
+              <div class="body-s semibold" data-i18n-html="common.telegram">Telegram<br></div>
             </a>
           </div>
           <div class="copyright mobile">© Kobeleva Anastasia, 2026</div>
@@ -490,7 +505,8 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67bdb0b6c5cd56182bca4d44"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
-  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="/js/i18n.js"></script>
+  <script type="text/plain" data-webflow-src="/js/webflow.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const burgerIcon = document.querySelector(".navbar_toggle");

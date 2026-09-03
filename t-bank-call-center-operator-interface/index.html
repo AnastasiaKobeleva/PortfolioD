@@ -1,7 +1,16 @@
 <!DOCTYPE html><!--  Last Published: Mon Mar 17 2025 08:07:20 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="67bdb0b6c5cd56182bca4d4e" data-wf-site="67bdb0b6c5cd56182bca4d44">
+<html lang="ru" data-i18n-page="tbank" data-wf-page="67bdb0b6c5cd56182bca4d4e" data-wf-site="67bdb0b6c5cd56182bca4d44">
 
 <head>
+  <script>
+(function () {
+  try {
+    var l = localStorage.getItem('site-lang');
+    if (l && l !== 'ru') document.documentElement.setAttribute('data-i18n-pending', '');
+  } catch (e) {}
+})();
+</script>
+
   <meta charset="utf-8">
   <title>T-bank - Call center operator interface</title>
   <meta content="T-bank - Call center operator interface" property="og:title">
@@ -59,16 +68,23 @@
                 <a href="/" class="nav-link-2 item w-inline-block"><img loading="eager" src="/images/icon-back.svg"
                     alt="" class="icon-24">
                   <div class="nav-logo">
-                    <div class="logo-name-2">На главную</div>
+                    <div class="logo-name-2" data-i18n="nav.logoBack">На главную</div>
                   </div>
                 </a>
               </div>
               <div class="navbar_right">
                 <div class="navbar-menu-wrapper-2">
-                  <a href="/projects/" class="nav-link-2 item w-nav-link">Проекты</a>
-                  <a href="/about/" class="nav-link-2 item w-nav-link">Обо мне</a>
+                  <a href="/projects/" class="nav-link-2 item w-nav-link" data-i18n="nav.projects">Проекты</a>
+                  <a href="/about/" class="nav-link-2 item w-nav-link" data-i18n="nav.about">Обо мне</a>
                   <a href="mailto:kobelevanastasiia@gmail.com" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2ad"
                     target="_blank" class="nav-link-2 mail w-nav-link">kobelevanastasiia@gmail.com</a>
+                </div>
+                <div class="lang-switch" data-lang-switch>
+                  <button type="button" class="lang-switch-toggle nav-link-2 item" data-lang-current aria-expanded="false" aria-haspopup="listbox">RU</button>
+                  <div class="lang-switch-menu" role="listbox">
+                    <button type="button" class="lang-switch-option" data-lang="ru" data-i18n="lang.ru">RU</button>
+                    <button type="button" class="lang-switch-option" data-lang="en" data-i18n="lang.en">EN</button>
+                  </div>
                 </div>
                 <div data-delay="1000" data-hover="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2af"
                   class="navbar_dropdown w-dropdown">
@@ -83,13 +99,13 @@
                           <div class="navbar_link-wrapper-2">
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2b8-fb00c29a" class="into-view-1">
                               <a href="/projects/" class="navbar_link-3 top w-inline-block">
-                                <div class="nav-link-2 item">Проекты</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.projects">Проекты</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2bd-fb00c29a" class="into-view-1">
                               <a href="/about/" class="navbar_link-3 bottom w-inline-block">
-                                <div class="nav-link-2 item">Обо мне</div><img loading="lazy"
+                                <div class="nav-link-2 item" data-i18n="nav.about">Обо мне</div><img loading="lazy"
                                   src="/images/icon-back.svg" alt="" class="icon-24 _180deg">
                               </a>
                             </div>
@@ -100,7 +116,7 @@
                             <div id="w-node-_0b82cc4d-98ce-7887-f47d-d7fcfb00c2c4-fb00c29a" class="into-view-1">
                               <a href="/documents/Kobeleva_Anastasia_CV_2026.pdf" target="_blank"
                                 class="navbar_link-3 middle w-inline-block">
-                                <div class="nav-link-2 item">Резюме</div>
+                                <div class="nav-link-2 item" data-i18n="nav.resume">Резюме</div>
                                 <div class="icon-48"><img loading="lazy" src="/images/message-text.svg" alt=""
                                     class="icon-24"></div>
                               </a>
@@ -111,7 +127,7 @@
                       <div class="wrapper">
                         <div class="navbar_drop-content _2">
                           <div class="section-intro align-center">
-                            <div class="heading-2 bold">Обсудим идеи 👋🏻</div>
+                            <div class="heading-2 bold" data-i18n="nav.discuss">Обсудим идеи 👋🏻</div>
                             <div class="icons-wrapper">
                               <a draggable="false" data-w-id="0b82cc4d-98ce-7887-f47d-d7fcfb00c2d0"
                                 href="mailto:kobelevanastasiia@gmail.com" target="_blank"
@@ -142,7 +158,7 @@
         <div class="project-hero-logo-title">
           <div class="company-logo-wrapper"><img src="/images/e3283f8b-eeb6-4471-9ea7-965ff52435f1.svg" loading="lazy"
               alt="" class="company-logo"></div>
-          <div class="heading-2 align-center all-caps">Т-банк — интерфейс оператора колл-центра</div>
+          <div class="heading-2 align-center all-caps" data-i18n="tbank.hero.title">Т-банк — интерфейс оператора колл-центра</div>
           <div class="project-hero-items">
             <div class="body-xs">UX/UI design</div>
             <div class="body-xs point">·</div>
@@ -163,16 +179,16 @@
           <div id="about" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">О проекте<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.about.title">О проекте<br></h1>
               </div>
               <div class="wrapper gap-1-rem">
                 <div class="wrapper max-100">
-                  <div class="body-s">Операторы колл-центра банка ежедневно обрабатывают сотни заявок на доставку
+                  <div class="body-s" data-i18n="tbank.about.p1">Операторы колл-центра банка ежедневно обрабатывают сотни заявок на доставку
                     банковских карт. Им необходимо быстро проверять данные клиентов, назначать встречи с курьером и
                     фиксировать статус каждого обращения.</div>
                 </div>
                 <div class="wrapper">
-                  <div class="body-s">Поэтому важно обеспечить им удобный и интуитивно понятный интерфейс, который
+                  <div class="body-s" data-i18n="tbank.about.p2">Поэтому важно обеспечить им удобный и интуитивно понятный интерфейс, который
                     сократит время на обработку информации, упростит их работу и позволит банку оптимизировать затраты.
                   </div>
                 </div>
@@ -182,34 +198,34 @@
           <div id="goals" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="wrapper gap-1-rem">
-                <h1 split-text="" class="body-xl semibold">Задача<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.goals.taskTitle">Задача<br></h1>
                 <div class="wrapper">
-                  <div class="body-s">Спроектировать интерфейс внутренней CRM-системы для операторов колл-центра. Новый
+                  <div class="body-s" data-i18n="tbank.goals.task">Спроектировать интерфейс внутренней CRM-системы для операторов колл-центра. Новый
                     инструмент должен упростить процесс назначения встреч, сделать управление заявками более прозрачным
                     и повысить общую эффективность работы сотрудников.</div>
                 </div>
               </div>
               <div class="wrapper gap-1-rem">
-                <h1 split-text="" class="body-xl semibold">Решение<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.goals.solutionTitle">Решение<br></h1>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">✦ Разработана главная страница с дашбордами, ключевой аналитикой, статистикой и
+                  <div class="body-s" data-i18n="tbank.goals.solution1">✦ Разработана главная страница с дашбордами, ключевой аналитикой, статистикой и
                     актуальными данными на текущий рабочий день сотрудника.</div>
-                  <div class="body-s">✦ Разработан экран с таблицей со всеми заявками, в котором оператор может увидеть
+                  <div class="body-s" data-i18n="tbank.goals.solution2">✦ Разработан экран с таблицей со всеми заявками, в котором оператор может увидеть
                     всю основную информацию и перейти к карточке заявки.</div>
-                  <div class="body-s">✦ Добавлены быстрые действия, такие как звонок, перенос встречи, отметка о
+                  <div class="body-s" data-i18n="tbank.goals.solution3">✦ Добавлены быстрые действия, такие как звонок, перенос встречи, отметка о
                     недозвоне и о повторном звонке.</div>
-                  <div class="body-s">✦ Обеспечена логичная структура интерфейса, позволяющая операторам эффективно
+                  <div class="body-s" data-i18n="tbank.goals.solution4">✦ Обеспечена логичная структура интерфейса, позволяющая операторам эффективно
                     управлять заявками.</div>
                 </div>
               </div>
               <div class="wrapper gap-1-rem">
-                <h1 split-text="" class="body-s light-grey"><span class="body-xl semibold">Результат</span><br></h1>
+                <h1 split-text="" class="body-s light-grey" data-i18n-html="tbank.goals.resultTitleHtml"><span class="body-xl semibold">Результат</span><br></h1>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">✦ Операторы быстрее обрабатывают заявки. Уменьшено среднее время, затрачиваемое на
+                  <div class="body-s" data-i18n="tbank.goals.result1">✦ Операторы быстрее обрабатывают заявки. Уменьшено среднее время, затрачиваемое на
                     клиента.</div>
-                  <div class="body-s">✦ Дашборды с актуальными данными о заявках помогают расставлять приоритеты в
+                  <div class="body-s" data-i18n="tbank.goals.result2">✦ Дашборды с актуальными данными о заявках помогают расставлять приоритеты в
                     задачах.</div>
-                  <div class="body-s">✦ Четкая структура коммуникации и своевременные фоллоу-апы повышают
+                  <div class="body-s" data-i18n="tbank.goals.result3">✦ Четкая структура коммуникации и своевременные фоллоу-апы повышают
                     удовлетворённость клиентов.</div>
                 </div>
               </div>
@@ -218,19 +234,19 @@
           <div id="user-story" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Юзер стори<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.story.title">Юзер стори<br></h1>
               </div>
               <div class="card-wrapper">
-                <h1 split-text="" class="body-m semibold">Как оператор колл-центра, я могу:<br></h1>
+                <h1 split-text="" class="body-m semibold" data-i18n-html="tbank.story.lead">Как оператор колл-центра, я могу:<br></h1>
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">✦ Проконсультировать клиента по оформленному продукту.</div>
-                  <div class="body-s">✦ Назначить встречу в удобное для клиента время.</div>
-                  <div class="body-s">✦ Связаться с клиентом в чате, если возникла необходимость.</div>
-                  <div class="body-s">✦ Увидеть рабочий/домашний адрес клиента для назначения встречи, изменить его или
+                  <div class="body-s" data-i18n="tbank.story.1">✦ Проконсультировать клиента по оформленному продукту.</div>
+                  <div class="body-s" data-i18n="tbank.story.2">✦ Назначить встречу в удобное для клиента время.</div>
+                  <div class="body-s" data-i18n="tbank.story.3">✦ Связаться с клиентом в чате, если возникла необходимость.</div>
+                  <div class="body-s" data-i18n="tbank.story.4">✦ Увидеть рабочий/домашний адрес клиента для назначения встречи, изменить его или
                     добавить новый.</div>
-                  <div class="body-s">✦ Использовать внутренние инструменты для совершения звонка: возможность
+                  <div class="body-s" data-i18n="tbank.story.5">✦ Использовать внутренние инструменты для совершения звонка: возможность
                     начать/завершить звонок, а также поставить его на удержание, выключить звук, микрофон.</div>
-                  <div class="body-s">✦ Посмотреть историю звонков и при необходимости перейти к карточке клиента, если
+                  <div class="body-s" data-i18n="tbank.story.6">✦ Посмотреть историю звонков и при необходимости перейти к карточке клиента, если
                     мне нужна будет дополнительная информация.</div>
                 </div>
               </div>
@@ -239,10 +255,10 @@
           <div id="hypotheses" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Гипотезы<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.hypotheses.title">Гипотезы<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Я начала с формирования гипотез. Мне было важно понять, какие функции действительно
+                <div class="body-s" data-i18n="tbank.hypotheses.intro">Я начала с формирования гипотез. Мне было важно понять, какие функции действительно
                   помогут операторам работать быстрее и эффективнее. Для этого я изучила их основные задачи, а также
                   опросила людей, работающих в сфере звонков. У них я узнала, какими сервисами они пользуются и с какими
                   проблемами сталкиваются при их использовании, выявила болевые точки и на основе этого сформулировала
@@ -255,11 +271,11 @@
                       <div class="number">
                         <div class="body-xs semibold">1</div>
                       </div>
-                      <div class="body-s semibold desktop">Быстрый доступ к данным</div>
-                      <div class="body-s semibold mobile"><span class="selected">   1   </span>  Быстрый доступ к данным
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.1.title">Быстрый доступ к данным</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.1.titleMobileHtml"><span class="selected">   1   </span>  Быстрый доступ к данным
                       </div>
                     </div>
-                    <div class="body-xs">Если у оператора под рукой будут все нужные данные о клиенте, он сможет сразу
+                    <div class="body-xs" data-i18n="tbank.hypotheses.1.desc">Если у оператора под рукой будут все нужные данные о клиенте, он сможет сразу
                       отвечать на вопросы и не тратить время на поиски.</div>
                   </div>
                 </div>
@@ -269,11 +285,11 @@
                       <div class="number">
                         <div class="body-xs semibold">2</div>
                       </div>
-                      <div class="body-s semibold desktop">История работы с заявкой</div>
-                      <div class="body-s semibold mobile"><span class="selected">   2   </span>  История работы с
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.2.title">История работы с заявкой</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.2.titleMobileHtml"><span class="selected">   2   </span>  История работы с
                         заявкой</div>
                     </div>
-                    <div class="body-xs">Благодаря истории всех действий по заявке, операторы смогут легко отслеживать,
+                    <div class="body-xs" data-i18n="tbank.hypotheses.2.desc">Благодаря истории всех действий по заявке, операторы смогут легко отслеживать,
                       что уже сделано и какие шаги нужны дальше.</div>
                   </div>
                 </div>
@@ -283,10 +299,10 @@
                       <div class="number">
                         <div class="body-xs semibold">3</div>
                       </div>
-                      <div class="body-s semibold desktop">Чат</div>
-                      <div class="body-s semibold mobile"><span class="selected">   3   </span>  Чат</div>
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.3.title">Чат</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.3.titleMobileHtml"><span class="selected">   3   </span>  Чат</div>
                     </div>
-                    <div class="body-xs">Если добавить возможность использовать чат и отправлять клиенту сообщения,
+                    <div class="body-xs" data-i18n="tbank.hypotheses.3.desc">Если добавить возможность использовать чат и отправлять клиенту сообщения,
                       контакт можно установить быстрее.</div>
                   </div>
                 </div>
@@ -296,11 +312,11 @@
                       <div class="number">
                         <div class="body-xs semibold">4</div>
                       </div>
-                      <div class="body-s semibold desktop">Фильтрация и поиск</div>
-                      <div class="body-s semibold mobile"><span class="selected">   4   </span>  Фильтрация и поиск
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.4.title">Фильтрация и поиск</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.4.titleMobileHtml"><span class="selected">   4   </span>  Фильтрация и поиск
                       </div>
                     </div>
-                    <div class="body-xs">Если оператор сможет использовать фильтры и поиск заявок под свои задачи, он
+                    <div class="body-xs" data-i18n="tbank.hypotheses.4.desc">Если оператор сможет использовать фильтры и поиск заявок под свои задачи, он
                       будет обрабатывать их быстрее.</div>
                   </div>
                 </div>
@@ -310,10 +326,10 @@
                       <div class="number">
                         <div class="body-xs semibold">5</div>
                       </div>
-                      <div class="body-s semibold desktop">Статистика</div>
-                      <div class="body-s semibold mobile"><span class="selected">   5   </span>  Статистика</div>
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.5.title">Статистика</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.5.titleMobileHtml"><span class="selected">   5   </span>  Статистика</div>
                     </div>
-                    <div class="body-xs">Если оператор сможет видеть свою статистику по звонкам и заявкам, он сможет
+                    <div class="body-xs" data-i18n="tbank.hypotheses.5.desc">Если оператор сможет видеть свою статистику по звонкам и заявкам, он сможет
                       анализировать свою эффективность и понимать, как достичь KPI.</div>
                   </div>
                 </div>
@@ -323,10 +339,10 @@
                       <div class="number">
                         <div class="body-xs semibold">6</div>
                       </div>
-                      <div class="body-s semibold desktop">Быстрые действия</div>
-                      <div class="body-s semibold mobile"><span class="selected">   6   </span>  Быстрые действия</div>
+                      <div class="body-s semibold desktop" data-i18n="tbank.hypotheses.6.title">Быстрые действия</div>
+                      <div class="body-s semibold mobile" data-i18n-html="tbank.hypotheses.6.titleMobileHtml"><span class="selected">   6   </span>  Быстрые действия</div>
                     </div>
-                    <div class="body-xs">Если у оператора будут кнопки для быстрого выполнения задач (звонок, перенос
+                    <div class="body-xs" data-i18n="tbank.hypotheses.6.desc">Если у оператора будут кнопки для быстрого выполнения задач (звонок, перенос
                       встречи, отметка о недозвоне), он сможет обрабатывать заявки быстрее.</div>
                   </div>
                 </div>
@@ -336,10 +352,10 @@
           <div id="user-persona" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Юзер персона<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.persona.title">Юзер персона<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Также я изучила отзывы сотрудников колл-центра на различных форумах и сайтах и ​​на
+                <div class="body-s" data-i18n="tbank.persona.intro">Также я изучила отзывы сотрудников колл-центра на различных форумах и сайтах и ​​на
                   их основе создала портрет персоны и карту эмпатии.</div>
               </div>
               <div class="user-persona">
@@ -348,29 +364,29 @@
                     class="persona t-bank">
                   <div class="wrapper gap-1-rem">
                     <div class="wrapper gap-0-5-rem">
-                      <div class="body-m semibold">Анастасия, 27 лет</div>
+                      <div class="body-m semibold" data-i18n="tbank.persona.name">Анастасия, 27 лет</div>
                     </div>
                     <div class="wrapper gap-0-5-rem">
-                      <div class="body-s semibold">Род деятельности</div>
-                      <div class="body-xs">Оператор колл-центра</div>
+                      <div class="body-s semibold" data-i18n="tbank.persona.jobLabel">Род деятельности</div>
+                      <div class="body-xs" data-i18n="tbank.persona.job">Оператор колл-центра</div>
                     </div>
                   </div>
                 </div>
                 <div class="wrapper gap-1-rem">
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Мотивация</div>
-                    <div class="body-xs">— Достичь ежемесячного процента KPI для получения премии.<br>— Повысить
+                    <div class="body-s semibold" data-i18n="tbank.persona.motivationLabel">Мотивация</div>
+                    <div class="body-xs" data-i18n-html="tbank.persona.motivationHtml">— Достичь ежемесячного процента KPI для получения премии.<br>— Повысить
                       лояльность клиентов и получить положительные отзывы.</div>
                   </div>
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Цели</div>
-                    <div class="body-xs">— Консультировать клиентов банка, рекомендовать подходящие продукты и назначать
+                    <div class="body-s semibold" data-i18n="tbank.persona.goalsLabel">Цели</div>
+                    <div class="body-xs" data-i18n-html="tbank.persona.goalsHtml">— Консультировать клиентов банка, рекомендовать подходящие продукты и назначать
                       встречи.<br>— Обработать максимальное количество заявок.<br>— Достичь цели по количеству
                       обработанных заявок за смену.</div>
                   </div>
                   <div class="wrapper gap-0-5-rem">
-                    <div class="body-s semibold">Болевые точки</div>
-                    <div class="body-xs">— Слишком много времени тратится на обработку и ввод данных данных после
+                    <div class="body-s semibold" data-i18n="tbank.persona.painLabel">Болевые точки</div>
+                    <div class="body-xs" data-i18n-html="tbank.persona.painHtml">— Слишком много времени тратится на обработку и ввод данных данных после
                       звонка.<br>— Клиенты часто не отвечают на звонки.<br>— Запутанный интерфейс и большое количество
                       ненужных вкладок.</div>
                   </div>
@@ -379,28 +395,28 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Карта эмпатий<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.empathy.title">Карта эмпатий<br></h1>
               </div>
               <div class="t-empathy-map-wrapper">
                 <div class="t-empathy-map-cell _1">
-                  <div class="body-s semibold">Что делает?</div>
-                  <div class="body-xs">— Обрабатывает заявки клиентов.<br>— Консультирует клиентов по продуктам
+                  <div class="body-s semibold" data-i18n="tbank.empathy.doesLabel">Что делает?</div>
+                  <div class="body-xs" data-i18n-html="tbank.empathy.doesHtml">— Обрабатывает заявки клиентов.<br>— Консультирует клиентов по продуктам
                     банка.<br>— Назначает встречи клиентов с курьером.</div>
                 </div>
                 <div class="t-empathy-map-cell _2">
-                  <div class="body-s semibold">Что слышит?</div>
-                  <div class="body-xs">— «Я не могу сейчас говорить».<br>— «У меня поменялись планы».<br>— «Хочу
+                  <div class="body-s semibold" data-i18n="tbank.empathy.hearsLabel">Что слышит?</div>
+                  <div class="body-xs" data-i18n-html="tbank.empathy.hearsHtml">— «Я не могу сейчас говорить».<br>— «У меня поменялись планы».<br>— «Хочу
                     получить карту как можно скорее».<br>— «Расскажите о приемуществах этой карты».</div>
                 </div>
                 <div class="t-empathy-map-cell _3">
-                  <div class="body-s semibold">Что думает?</div>
-                  <div class="body-xs">— «Нужно быстро обработать запрос, у меня нет времени на поиск информации».<br>—
+                  <div class="body-s semibold" data-i18n="tbank.empathy.thinksLabel">Что думает?</div>
+                  <div class="body-xs" data-i18n-html="tbank.empathy.thinksHtml">— «Нужно быстро обработать запрос, у меня нет времени на поиск информации».<br>—
                     «Боюсь сделать ошибку, особенно когда клиент торопится».<br>— «Было бы проще, если бы все
                     необходимые данные были под рукой».</div>
                 </div>
                 <div class="t-empathy-map-cell _4">
-                  <div class="body-s semibold">Что видит?</div>
-                  <div class="body-xs">— Сложный интерфейс с множеством вкладок.<br>— Клиенты часто меняют свои
+                  <div class="body-s semibold" data-i18n="tbank.empathy.seesLabel">Что видит?</div>
+                  <div class="body-xs" data-i18n-html="tbank.empathy.seesHtml">— Сложный интерфейс с множеством вкладок.<br>— Клиенты часто меняют свои
                     планы.<br>— Другие операторы также сталкиваются с трудностями и подходят с вопросами.<br>—
                     Количество клиентов банка растет.</div>
                 </div>
@@ -410,14 +426,14 @@
           <div id="solution" class="section-container padding-2-rem">
             <div class="section-intro">
               <div class="heading-wrapper">
-                <h1 split-text="" class="heading-3">Решение<br></h1>
+                <h1 split-text="" class="heading-3" data-i18n-html="tbank.solution.title">Решение<br></h1>
               </div>
               <div class="wrapper">
                 <div class="heading-wrapper max-62">
-                  <h1 split-text="" class="body-xl semibold">Главный экран<br></h1>
+                  <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.home.title">Главный экран<br></h1>
                 </div>
                 <div class="wrapper max-100">
-                  <div class="body-s">Сначала я представила интерфейс как простую форму для назначения встреч, но быстро
+                  <div class="body-s" data-i18n="tbank.solution.home.p1">Сначала я представила интерфейс как простую форму для назначения встреч, но быстро
                     поняла, что операторам нужна более продуманная система. Они работают с большим количеством заявок в
                     день, поэтому интерфейс должен помогать быстро ориентироваться в данных, а не просто отображать их.
                   </div>
@@ -426,7 +442,7 @@
                   alt="" class="screen-img">
               </div>
               <div class="wrapper">
-                <div class="body-s">Я начала с главной страницы. Хотелось сделать её полезной и информативной, но не
+                <div class="body-s" data-i18n="tbank.solution.home.p2">Я начала с главной страницы. Хотелось сделать её полезной и информативной, но не
                   перегруженной. Первым решением был список заявок, но он не давал общего понимания рабочего дня. Тогда
                   я добавила дашборды с ключевой аналитикой — сколько заявок поступило, сколько уже обработано, сколько
                   ещё в очереди. Это сразу помогло сделать процесс более прозрачным.</div><img
@@ -437,10 +453,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Экран заявок<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.requests.title">Экран заявок<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Этот экран должен помогать операторам быстро находить нужные заявки и эффективно с
+                <div class="body-s" data-i18n-html="tbank.solution.requests.descHtml">Этот экран должен помогать операторам быстро находить нужные заявки и эффективно с
                   ними работать. Я структурировала список так, чтобы ключевая информация — статус заявки, данные клиента
                   и назначенное время встречи — была сразу видна.<br>Также я добавила фильтры и поиск, чтобы операторы
                   могли быстро находить нужные им заявки. Также предусмотрела возможность мгновенного перехода в
@@ -452,10 +468,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Экран обработки заявки<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.process.title">Экран обработки заявки<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">После нажатия на конкретного клиента в общем списке, открывается страница с деталями
+                <div class="body-s" data-i18n="tbank.solution.process.p1">После нажатия на конкретного клиента в общем списке, открывается страница с деталями
                   заявки. Здесь можно увидеть основные данные клиента, связаться с ним, уточнить детали доставки и
                   передать заявку в работу. Интерфейс помогает быстро взаимодействовать с клиентом и удобно управлять
                   процессом оформления доставки.</div><img src="/images/Overview-1.png" loading="eager"
@@ -464,7 +480,7 @@
                   alt="" class="screen-img">
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Оператор в пределах одного экрана может связаться с клиентом и тут же заполнить или
+                <div class="body-s" data-i18n="tbank.solution.process.p2">Оператор в пределах одного экрана может связаться с клиентом и тут же заполнить или
                   отредактировать все необходимые данные - это очень удобно, все инструменты находятся под рукой, что
                   очень ускоряет работу.</div><img src="/images/Overview_1.png" loading="eager"
                   sizes="(max-width: 2160px) 100vw, 2160px"
@@ -474,10 +490,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Смена статуса заявки<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.status.title">Смена статуса заявки<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Оператор может управлять статусами заявки в зависимости от стадии обработки.
+                <div class="body-s" data-i18n-html="tbank.solution.status.descHtml">Оператор может управлять статусами заявки в зависимости от стадии обработки.
                   Приступая к заявке, он устанавливает статус<strong> «В работе»</strong>. Если заявка успешно
                   обработана и передана курьеру, статус автоматически меняется на <strong>«Завершен»</strong>. В
                   процессе общения с клиентом оператор также может присвоить статус <strong>«Отменен»</strong> или
@@ -489,10 +505,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Панель звонка<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.call.title">Панель звонка<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Оператору достаточно одного клика, чтобы связаться с клиентом. Номер подгружается
+                <div class="body-s" data-i18n="tbank.solution.call.desc">Оператору достаточно одного клика, чтобы связаться с клиентом. Номер подгружается
                   автоматически, а после нажатия на кнопку вызова появляется панель управления: можно отключить
                   микрофон, поставить звонок на удержание или завершить разговор. Все функции собраны в одном месте для
                   удобства и быстроты работы.</div><img src="/images/Call-panel.png" loading="eager"
@@ -503,10 +519,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Подсказки с описанием продукта<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.hints.title">Подсказки с описанием продукта<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">При наведении на иконку рядом с названием продукта появляется всплывающее окно с
+                <div class="body-s" data-i18n="tbank.solution.hints.desc">При наведении на иконку рядом с названием продукта появляется всплывающее окно с
                   преимуществами. Это помогает оператору быстро ориентироваться в деталях и оперативно отвечать на
                   вопросы клиента.</div><img src="/images/About-card.png" loading="eager"
                   sizes="(max-width: 1848px) 100vw, 1848px"
@@ -516,14 +532,14 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Чат с клиентом<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.chat.title">Чат с клиентом<br></h1>
               </div>
               <div class="wrapper max-100">
                 <div class="wrapper gap-1-rem">
-                  <div class="body-s">При нажатии на кнопку <strong>«Перейти в чат»</strong> открывается диалог с
+                  <div class="body-s" data-i18n-html="tbank.solution.chat.p1Html">При нажатии на кнопку <strong>«Перейти в чат»</strong> открывается диалог с
                     клиентом. Здесь оператор может отправить сообщение и уточнить детали доставки. Клиент также может
                     самостоятельно обратиться к оператору для внесения изменений или уточнения информации.<br></div>
-                  <div class="body-s">В окне чата оператор может легко переходить к другим сообщениям. В общем
+                  <div class="body-s" data-i18n-html="tbank.solution.chat.p2Html">В окне чата оператор может легко переходить к другим сообщениям. В общем
                     мессенджере доступны все виды коммуникаций: переписка с клиентами, корпоративные сообщения и чаты с
                     коллегами.<br></div>
                 </div><img src="/images/Chat-1.png" loading="eager" sizes="(max-width: 2880px) 100vw, 2880px"
@@ -533,10 +549,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Подтверждение заявки<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.confirm.title">Подтверждение заявки<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">После общения с клиентом и заполнения всех необходимых данных заявка готова к
+                <div class="body-s" data-i18n-html="tbank.solution.confirm.descHtml">После общения с клиентом и заполнения всех необходимых данных заявка готова к
                   передаче курьеру. Всплывающее окно позволяет оператору проверить корректность информации перед
                   отправкой. При необходимости можно внести изменения, отменив действие.<br></div><img
                   src="/images/confirmation.png" loading="eager" sizes="(max-width: 1780px) 100vw, 1780px"
@@ -546,10 +562,10 @@
             </div>
             <div class="section-intro">
               <div class="heading-wrapper max-62">
-                <h1 split-text="" class="body-xl semibold">Встреча успешно назначена<br></h1>
+                <h1 split-text="" class="body-xl semibold" data-i18n-html="tbank.solution.success.title">Встреча успешно назначена<br></h1>
               </div>
               <div class="wrapper max-100">
-                <div class="body-s">Теперь заявка успешно обработана и передана системой свободному курьеру. На этом
+                <div class="body-s" data-i18n-html="tbank.solution.success.descHtml">Теперь заявка успешно обработана и передана системой свободному курьеру. На этом
                   работа оператора закончена, заявке автоматически присваивается статус <strong>«Завершен»</strong>.
                   Всплывающее окно уведомляет оператора об успешном завершении процесса, а кнопка <strong>«Продолжить»
                   </strong>возвращает его к общей таблице с заявками без лишних шагов.<br></div><img
@@ -561,8 +577,8 @@
           </div>
           <div id="result" class="section-container padding-2-rem">
             <div class="section-intro">
-              <h1 split-text="" class="heading-3">Результат<br></h1>
-              <div class="body-s">Мне удалось учесть весь негативный опыт пользователей, закрыть базовые потребности и
+              <h1 split-text="" class="heading-3" data-i18n-html="tbank.result.title">Результат<br></h1>
+              <div class="body-s" data-i18n="tbank.result.p1">Мне удалось учесть весь негативный опыт пользователей, закрыть базовые потребности и
                 оптимизировать рабочее пространство оператора колл-центра. Интуитивно понятный интерфейс упростит
                 рабочий процесс и позволит операторам быстрее обрабатывать заявки. Это не только повысит удобство
                 работы, но и поспособствует росту числа выданных продуктов, что положительно скажется на прибыли банка.
@@ -573,25 +589,25 @@
         <div class="navigation-container">
           <div class="section-intro max-100 gap-1 position-sticky">
             <a href="#about" class="navigation-item w-inline-block">
-              <div class="body-xxs">О проекте</div>
+              <div class="body-xxs" data-i18n="tbank.nav.about">О проекте</div>
             </a>
             <a href="#goals" class="navigation-item w-inline-block">
-              <div class="body-xxs">Задача</div>
+              <div class="body-xxs" data-i18n="tbank.nav.task">Задача</div>
             </a>
             <a href="#user-story" class="navigation-item w-inline-block">
-              <div class="body-xxs">Юзер стори</div>
+              <div class="body-xxs" data-i18n="tbank.nav.story">Юзер стори</div>
             </a>
             <a href="#hypotheses" class="navigation-item w-inline-block">
-              <div class="body-xxs">Гипотезы</div>
+              <div class="body-xxs" data-i18n="tbank.nav.hypotheses">Гипотезы</div>
             </a>
             <a href="#user-persona" class="navigation-item w-inline-block">
-              <div class="body-xxs">Персона</div>
+              <div class="body-xxs" data-i18n="tbank.nav.persona">Персона</div>
             </a>
             <a href="#solution" class="navigation-item w-inline-block">
-              <div class="body-xxs">Решение</div>
+              <div class="body-xxs" data-i18n="tbank.nav.solution">Решение</div>
             </a>
             <a href="#result" class="navigation-item w-inline-block">
-              <div class="body-xxs">Результат</div>
+              <div class="body-xxs" data-i18n="tbank.nav.result">Результат</div>
             </a>
           </div>
         </div>
@@ -603,16 +619,16 @@
           <div class="line-fill-2 light"></div>
         </div>
         <div class="section-intro max-100">
-          <h1 split-text="" class="heading-3 align-right">Другие проекты<br></h1>
+          <h1 split-text="" class="heading-3 align-right" data-i18n-html="common.otherProjects">Другие проекты<br></h1>
           <div id="Experience-1" class="more-works">
             <a data-w-id="32b38d3f-5dc8-ebeb-4dae-8334c367f780" href="/fintrack/"
               class="case-link fintrack w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Fintrack</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.fintrack.name">Fintrack</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Трекер финансов и целей</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.fintrack.tagline">Трекер финансов и целей</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -626,10 +642,10 @@
               aria-current="page" class="case-link t-bank w-inline-block w--current">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Т-банк</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.tbank.name">Т-банк</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Интерфейс оператора колл-центра</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.tbank.tagline">Интерфейс оператора колл-центра</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">CRM, 2023</p>
@@ -642,10 +658,10 @@
               class="case-link my-o w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Мой О!</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.oredesign.name">Мой О!</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Редизайн открытия онлайн-депозита</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.oredesign.tagline">Редизайн открытия онлайн-депозита</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2024</p>
@@ -660,10 +676,10 @@
               class="case-link freshmart w-inline-block">
               <div class="wrapper gap-0-5-rem">
                 <div class="wrapper">
-                  <h3 class="body-l semibold align-center">Freshmart</h3>
+                  <h3 class="body-l semibold align-center" data-i18n="projects.freshmart.name">Freshmart</h3>
                 </div>
                 <div class="wrapper">
-                  <h3 class="body-s align-center">Cервис доставки полезной еды</h3>
+                  <h3 class="body-s align-center" data-i18n="projects.freshmart.tagline">Cервис доставки полезной еды</h3>
                 </div>
                 <div class="wrapper">
                   <p class="body-s grey align-center">Mobile app, 2023</p>
@@ -677,23 +693,23 @@
         </div>
         <div class="space-section"></div>
         <div class="wrapper footer-text">
-          <div class="body-xl align-center desktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
+          <div class="body-xl align-center desktop" data-i18n-html="common.footerCtaDesktop">У вас есть проект, в котором я могла бы поучаствовать?<br>Буду рада
             обсудить детали! ✨</div>
-          <div class="body-xl align-center mobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
+          <div class="body-xl align-center mobile" data-i18n="common.footerCtaMobile">У вас есть проект, в котором я могла бы поучаствовать? Буду рада
             обсудить детали! ✨</div>
         </div>
         <div class="section-intro horizontal align-center">
           <div class="copyright desktop">© Kobeleva Anastasia, 2026</div>
           <div class="links">
             <a href="mailto:kobelevanastasiia@gmail.com" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Email<br></div>
+              <div class="body-s semibold" data-i18n-html="common.email">Email<br></div>
             </a>
             <a href="https://www.linkedin.com/in/anastasia-kobeleva/"
               class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">LinkedIn<br></div>
+              <div class="body-s semibold" data-i18n-html="common.linkedin">LinkedIn<br></div>
             </a>
             <a href="https://t.me/KobelevaAnastasia" class="button-secondary light-mode w-inline-block">
-              <div class="body-s semibold">Telegram<br></div>
+              <div class="body-s semibold" data-i18n-html="common.telegram">Telegram<br></div>
             </a>
           </div>
           <div class="copyright mobile">© Kobeleva Anastasia, 2026</div>
@@ -707,7 +723,8 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67bdb0b6c5cd56182bca4d44"
     type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>
-  <script src="/js/webflow.js" type="text/javascript"></script>
+  <script src="/js/i18n.js"></script>
+  <script data-webflow-src="/js/webflow.js" type="text/javascript"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const burgerIcon = document.querySelector(".navbar_toggle");
