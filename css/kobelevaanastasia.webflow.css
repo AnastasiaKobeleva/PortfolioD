@@ -4199,8 +4199,6 @@ p {
     background-image: none !important;
     background-color: transparent !important;
     box-shadow: none !important;
-    position: fixed !important;
-    inset: 0 0 auto !important;
   }
 
   body.no-scroll .lang-switch-toggle,
