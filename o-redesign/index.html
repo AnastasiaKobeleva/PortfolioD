@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#ffffff">
   <link href="/css/normalize.css" rel="stylesheet" type="text/css">
   <link href="/css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="/css/kobelevaanastasia.webflow.css?v=3" rel="stylesheet" type="text/css">
+  <link href="/css/kobelevaanastasia.webflow.css?v=4" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -677,23 +677,35 @@
             window.scrollTo(0, lockedScrollY);
           }
         };
-        const blockOverlayEvent = (e) => {
+        const dropdownList = document.querySelector(".navbar_dropdown-list");
+        const closeMenu = () => {
+          if (!lastOpen) return;
+          if (burgerIcon.classList.contains("w--open")) {
+            burgerIcon.click();
+            return;
+          }
+          dropdown?.classList.remove("w--open");
+          dropdownList?.classList.remove("w--open");
+          burgerIcon.classList.remove("w--open");
+        };
+        const isMenuContent = (el) =>
+          !!(el && el.closest && el.closest(".navbar_toggle, .navbar_drop-content, .lang-switch"));
+        const closeOnEmptySpace = (e) => {
+          if (!lastOpen || isMenuContent(e.target)) return;
           e.preventDefault();
           e.stopPropagation();
-          e.stopImmediatePropagation();
+          closeMenu();
         };
         if (overlay) {
-          ["click", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend", "wheel", "touchmove"].forEach((type) => {
-            overlay.addEventListener(type, blockOverlayEvent, { capture: true, passive: false });
-            document.addEventListener(type, (e) => {
-              if (e.target === overlay) {
-                e.preventDefault();
-                e.stopImmediatePropagation();
-              }
+          ["wheel", "touchmove"].forEach((type) => {
+            overlay.addEventListener(type, (e) => {
+              e.preventDefault();
+              e.stopPropagation();
             }, { capture: true, passive: false });
           });
         }
-        const dropdownList = document.querySelector(".navbar_dropdown-list");
+        document.addEventListener("click", closeOnEmptySpace, true);
+        document.addEventListener("touchend", closeOnEmptySpace, { capture: true, passive: false });
         const syncOpen = () => {
           const open = !!(
             (dropdown && dropdown.classList.contains("w--open")) ||

@@ -2918,6 +2918,17 @@ p {
   inset: 0;
 }
 
+/* Empty menu chrome lets taps reach the overlay so the burger can close */
+.navbar_dropdown-list,
+.navbar_drop-content-wrapper {
+  pointer-events: none;
+}
+
+.navbar_drop-content,
+.navbar_toggle {
+  pointer-events: auto;
+}
+
 .navbar-wrapper {
   z-index: 1000;
   position: fixed;
