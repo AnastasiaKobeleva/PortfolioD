@@ -130,21 +130,127 @@
 
   function loadWebflow() {
     return new Promise(function (resolve) {
-      var placeholder = document.querySelector('script[data-webflow-src]');
-      if (!placeholder) { resolve(); return; }
-      var src = placeholder.getAttribute('data-webflow-src');
-      if (!src) { resolve(); return; }
-      var injected = document.createElement('script');
-      injected.src = src;
-      injected.type = 'text/javascript';
-      injected.onload = resolve;
-      injected.onerror = resolve;
-      document.body.appendChild(injected);
+      function start() {
+        var placeholder = document.querySelector('script[data-webflow-src]');
+        if (!placeholder) { resolve(); return; }
+        var src = placeholder.getAttribute('data-webflow-src');
+        if (!src) { resolve(); return; }
+        var injected = document.createElement('script');
+        injected.src = src;
+        injected.type = 'text/javascript';
+        var done = false;
+        function finish() {
+          if (done) return;
+          done = true;
+          clearTimeout(timer);
+          resolve();
+        }
+        var timer = setTimeout(finish, 1000);
+        injected.onload = finish;
+        injected.onerror = finish;
+        document.body.appendChild(injected);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', start);
+      } else {
+        start();
+      }
     });
   }
 
   function clearPending() {
     document.documentElement.removeAttribute('data-i18n-pending');
+  }
+
+  function waitForIx2() {
+    return new Promise(function (resolve) {
+      var html = document.documentElement;
+      if (html.classList.contains('w-mod-ix')) {
+        resolve();
+        return;
+      }
+      var done = false;
+      var timer;
+      var observer = new MutationObserver(function () {
+        if (html.classList.contains('w-mod-ix')) finish();
+      });
+      function finish() {
+        if (done) return;
+        done = true;
+        observer.disconnect();
+        clearTimeout(timer);
+        resolve();
+      }
+      observer.observe(html, { attributes: true, attributeFilter: ['class'] });
+      requestAnimationFrame(function () {
+        requestAnimationFrame(finish);
+      });
+      timer = setTimeout(finish, 1000);
+    });
+  }
+
+  function kickSafariLayers() {
+    try {
+      window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event('scroll'));
+    } catch (e) {
+      /* ignore */
+    }
+  }
+
+  function isFullyHidden(el) {
+    var inline = el.style.opacity;
+    if (inline !== '' && parseFloat(inline) === 0) return true;
+    if (inline === '') return parseFloat(window.getComputedStyle(el).opacity) === 0;
+    return false;
+  }
+
+  function unstickIfHidden(el, clearTransform) {
+    if (!isFullyHidden(el)) return;
+    el.style.opacity = '1';
+    if (clearTransform) {
+      el.style.transform = 'none';
+      el.style.webkitTransform = 'none';
+    }
+  }
+
+  function forceVisibleIfStuck() {
+    document.querySelectorAll('.full-page').forEach(function (el) {
+      unstickIfHidden(el, true);
+    });
+    document.querySelectorAll('.navbar-wrapper').forEach(function (el) {
+      unstickIfHidden(el, true);
+    });
+    var vh = window.innerHeight;
+    document.querySelectorAll('[data-w-id]').forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh) unstickIfHidden(el, true);
+    });
+  }
+
+  var revealed = false;
+
+  function revealPage(opts) {
+    if (revealed) return;
+    revealed = true;
+    clearPending();
+    kickSafariLayers();
+    if (opts && opts.force) {
+      requestAnimationFrame(function () {
+        forceVisibleIfStuck();
+      });
+    }
+  }
+
+  function kickIx2() {
+    try {
+      if (window.Webflow && typeof window.Webflow.require === 'function') {
+        var ix2 = window.Webflow.require('ix2');
+        if (ix2 && typeof ix2.init === 'function') ix2.init();
+      }
+    } catch (e) {
+      /* ignore */
+    }
+    kickSafariLayers();
   }
 
   function applyCvLinks(lang) {
@@ -165,12 +271,26 @@
   syncLangSwitch(lang);
   bindLangSwitch(lang);
 
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted) {
+      kickIx2();
+      revealPage();
+    }
+  });
+
+  setTimeout(function () {
+    if (!document.documentElement.classList.contains('w-mod-ix')) {
+      forceVisibleIfStuck();
+    }
+    revealPage({ force: true });
+  }, 1000);
+
   var controller = new AbortController();
   var fetchTimeoutId = setTimeout(function () {
     controller.abort();
   }, 4000);
 
-  fetch(localesBase + 'locales/' + lang + '.json', { signal: controller.signal })
+  var translations = fetch(localesBase + 'locales/' + lang + '.json', { signal: controller.signal })
     .then(function (response) {
       if (!response.ok) throw new Error('Failed to load locales');
       return response.json();
@@ -183,9 +303,12 @@
     })
     .then(function () {
       clearTimeout(fetchTimeoutId);
-      return loadWebflow();
-    })
-    .then(function () {
-      clearPending();
     });
+
+  Promise.all([translations, loadWebflow()])
+    .then(function () {
+      return waitForIx2();
+    })
+    .then(revealPage)
+    .catch(revealPage);
 })();

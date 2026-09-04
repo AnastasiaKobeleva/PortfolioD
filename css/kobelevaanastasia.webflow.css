@@ -2911,11 +2911,11 @@ p {
   backdrop-filter: blur(30px);
   pointer-events: auto;
   background-color: #44444480;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: none;
   position: fixed;
-  inset: 0%;
+  inset: 0;
 }
 
 .navbar-wrapper {
@@ -5776,16 +5776,14 @@ html[data-i18n-pending] body {
 }
 
 html.no-scroll,
-html.no-scroll body,
-html:has(.navbar_dropdown-list.w--open),
-html:has(.navbar_dropdown-list.w--open) body {
-  overflow: hidden !important;
+html:has(.navbar_dropdown-list.w--open) {
   overscroll-behavior: none;
-  touch-action: none;
 }
 
 html.no-scroll body,
 html:has(.navbar_dropdown-list.w--open) body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
   position: fixed !important;
   width: 100%;
   left: 0;
