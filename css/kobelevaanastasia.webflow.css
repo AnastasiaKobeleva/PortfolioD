@@ -5922,5 +5922,6 @@ html:has(.navbar_dropdown-list.w--open) .full-page {
 html[lang="en"] .heading-wrapper.heading-home {
   width: max-content;
   max-width: 100%;
-  padding-right: 1.2em;
+  padding-right: .4em;
+  overflow: visible;
 }

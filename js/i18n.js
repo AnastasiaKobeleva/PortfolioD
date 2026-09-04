@@ -229,11 +229,23 @@
 
   var revealed = false;
 
+  function kickHeroEmoji() {
+    var img = document.querySelector('img.emoji-2');
+    if (!img) return;
+    img.setAttribute('loading', 'eager');
+    if (img.complete && img.naturalWidth > 0) return;
+    var src = img.getAttribute('src');
+    if (!src) return;
+    img.removeAttribute('src');
+    img.setAttribute('src', src);
+  }
+
   function revealPage(opts) {
     if (revealed) return;
     revealed = true;
     clearPending();
     kickSafariLayers();
+    kickHeroEmoji();
     if (opts && opts.force) {
       requestAnimationFrame(function () {
         forceVisibleIfStuck();
