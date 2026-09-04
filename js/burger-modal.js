@@ -32,6 +32,11 @@
     var lockedScrollY = 0;
     var swallowUntil = 0;
 
+    var rememberScroll = function () {
+      if (lastOpen || document.documentElement.classList.contains("no-scroll")) return;
+      lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    };
+
     var showOverlay = function () {
       if (!overlay) return;
       overlay.style.display = "block";
@@ -53,7 +58,8 @@
       if (open === lastOpen) return;
       lastOpen = open;
       if (open) {
-        lockedScrollY = window.scrollY || window.pageYOffset;
+        var currentY = window.scrollY || window.pageYOffset || 0;
+        if (currentY > 0) lockedScrollY = currentY;
         document.documentElement.classList.add("no-scroll");
         body.classList.add("no-scroll");
         body.style.top = "-" + lockedScrollY + "px";
@@ -63,6 +69,7 @@
         showOverlay();
         setThemeColor(OPEN_THEME);
       } else {
+        var restoreY = lockedScrollY;
         document.documentElement.classList.remove("no-scroll");
         body.classList.remove("no-scroll");
         body.style.top = "";
@@ -71,7 +78,10 @@
         burgerIcon.classList.remove("active");
         hideOverlay();
         setThemeColor(CLOSED_THEME);
-        window.scrollTo(0, lockedScrollY);
+        window.scrollTo(0, restoreY);
+        requestAnimationFrame(function () {
+          window.scrollTo(0, restoreY);
+        });
       }
     };
 
@@ -138,7 +148,9 @@
     }
 
     document.addEventListener("click", swallowGhostClick, true);
-    document.addEventListener("touchend", swallowGhostClick, { capture: true, passive: false });
+
+    burgerIcon.addEventListener("pointerdown", rememberScroll, true);
+    burgerIcon.addEventListener("touchstart", rememberScroll, { capture: true, passive: true });
 
     [dropdown, dropdownList].forEach(function (el) {
       if (!el) return;

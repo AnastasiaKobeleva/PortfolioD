@@ -4200,10 +4200,7 @@ p {
 
   body.no-scroll .navbar-wrapper,
   body.no-scroll .navbar-wrapper.home,
-  body.no-scroll .navbar,
-  body:has(.navbar_dropdown-list.w--open) .navbar-wrapper,
-  body:has(.navbar_dropdown-list.w--open) .navbar-wrapper.home,
-  body:has(.navbar_dropdown-list.w--open) .navbar {
+  body.no-scroll .navbar {
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     background: transparent !important;
@@ -4212,8 +4209,7 @@ p {
     box-shadow: none !important;
   }
 
-  body.no-scroll .lang-switch-toggle,
-  body:has(.navbar_dropdown-list.w--open) .lang-switch-toggle {
+  body.no-scroll .lang-switch-toggle {
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
     background-color: transparent !important;
@@ -5786,13 +5782,11 @@ html[data-i18n-pending] body {
   visibility: hidden;
 }
 
-html.no-scroll,
-html:has(.navbar_dropdown-list.w--open) {
+html.no-scroll {
   overscroll-behavior: none;
 }
 
-html.no-scroll body,
-html:has(.navbar_dropdown-list.w--open) body {
+html.no-scroll body {
   overflow: hidden !important;
   overscroll-behavior: none;
   position: fixed !important;
@@ -5801,7 +5795,7 @@ html:has(.navbar_dropdown-list.w--open) body {
   right: 0;
 }
 
-html:has(.navbar_dropdown-list.w--open) .full-page {
+html.no-scroll .full-page {
   overflow: hidden !important;
 }
 
